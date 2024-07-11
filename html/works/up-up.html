@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111016994-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111016994-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <title>Up & Up | Yanfeng Jin (Tony)</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="shortcut icon" type="image/x-icon" href="../../assets/icon-tab.ico">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel = "stylesheet" type = "text/css" href = "../../css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../../css/fonts.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/icon-tab.ico">
+
+    <link href="../../css/zoom.css" rel="stylesheet">
+    <script src="../../js/transition.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://use.fontawesome.com/a891bb0a11.js"></script>
+    <script src="../../js/script.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1409449789");
+    </script>
+
+  </head>
+
+  <body>
+    <div class="spinner-wrapper">
+      <div class="p-center-wrapper">
+        <div class="la-line-scale la-dark">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <h4 id="preloader-title"></h4>
+            <h5 id="preloader-content"></h5>
+        </div>
+
+      </div>
+
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-nav">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../home.html">Tony Jin</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="collapsible-nav">
+        <ul class="nav navbar-nav">
+          <li><a class="selected hvr-underline-from-left" href="../home.html#my-work">Projects</a></li>
+          <li><a class="hvr-underline-from-left" href="../../assets/Yanfeng-Jin-Resume-v8.3.pdf" target="_blank">Resume</a></li>
+          <li><a class="hvr-underline-from-left" href="https://medium.com/@yanfengjin" target="_blank">Writings</a></li>
+          <li><a class="hvr-underline-from-left" href="../about-me.html">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 50px">
+        <nav class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <div class="bs-docs-sidebar">
+            <ul class="nav nav-stacked"id="sidebar">
+
+              <li>
+                <a href="#overview">Overview</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#problem">Problem</a></li>
+                  <li><a href="#solution">Solution</a></li>
+                  <li><a href="#methods">Our Approach</a></li>
+                  <li><a href="#my-role">My Contribution</a></li>
+                  <li><a href="#design-outcome">Design Outcome</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#research">Research</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#expert-interview">Expert Interview</a></li>
+                  <li><a href="#comp-analysis">Competitive Analysis</a></li>
+                  <li><a href="#lit-review">Literature Review</a></li>
+                  <li><a href="#interviews">Interviews</a></li>
+                  <li><a href="#persona">Persona</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#design">Design</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#ideation">Ideation</a></li>
+                  <li><a href="#design-alts">Design Alternatives</a></li>
+                  <li><a href="#feedback">User Feedback</a></li>
+                  <li><a href="#info-arch">Information Architecture</a></li>
+                  <li><a href="#final-design">Final Design</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#evaluate">Evaluate</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#usability">Usability Testing</a></li>
+                  <li><a href="#future-directions">Future Directions</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+
+        <div class="bg bg-up" data-aos="fade-up" data-aos-duration="600"></div>
+        <div class="jumbotron">
+          <div class="jumbotron-text">
+            <!-- <h1>Eatxplore</h1>
+            <p class="lead">Breaking the Cultural Barriers of Food.</p> -->
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+          <!-- <div data-aos="fade-up" data-aos-duration="600">
+            <h1 class="article-title">Up & Up</h1>
+            <p class="article-subtitle">Helping Georgia Tech students relieve their stress through collective breathing games</p>
+            <hr>
+            <div class="video-wrapper">
+              <iframe width="100%" height="auto" src="https://www.youtube.com/embed/iC_LRc1Nk4A" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div> -->
+
+          <!-- <img src="../../assets/up-perspective.png" alt="Collective Breathing" class="img-responsive col-centered full-img"> -->
+
+          <section id="overview" class="group first-section">
+              <h6>           </h6><br>
+              <h3>Overview</h3>
+              <hr>
+              <div class="row">
+                <div id="problem" class="subgroup-left-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <h4>Problem</h4>
+                    <p>A majority of Georgia Tech students, typically known as Type A students, are achievement-oriented, ambitious, and competitive. <span class="highlight highlight-up">The heavy workload at Tech, together with students' high standards for themselves, leads to a high level of stress and mental health issues.</span></p>
+                    <h4 id="solution">Solution</h4>
+                    <p>We designed a collective breathing game application that <span class="highlight highlight-up">encourages students to do deep breathing exercises together</span> in order to relieve their stress.
+                    </p>
+                </div>
+
+                <div class="subgroup-right-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <h4>My Role</h4>
+                  <p>UX Designer, UX Researcher</p>
+                  <h4>Timeline</h4>
+                  <p>Sept. 2017 - Dec. 2017 </p>
+                  <h4>Team Members</h4>
+                  <p>Tony Jin, Jessica Tsui, Dongwhi Yoo</p>
+                  <h4></h4>
+                  <h4>Tools</h4>
+                  <p>Sketch, Principle</p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+
+
+
+              <div id="methods" class="subgroup">
+                  <h4>Our Approach</h4>
+                  <img class="img-responsive full-img"src="../../assets/up-design-process.png" alt="Design process">
+              </div>
+
+
+
+              <div id="my-role" class="subgroup">
+                  <h4>My Contribution</h4>
+                  <p>During the research phase, <span class="highlight highlight-up">I was in charge of interviewing potential users and creating personas using Sketch.</span> I also contributed to the literature review and competitive analysis.<br><br>
+
+                  After our brainstorming session, <span class="highlight highlight-up">I created low-fidelity prototypes of the collective breathing dark-room concept, and moderated user feedback sessions</span>. I then <span class="highlight highlight-up">designed the user interface</span> for the onboarding process and the tutorial of the app using Sketch, and <span class="highlight highlight-up">created the game animation using Principle.</span> <br><br>
+
+                  During the evaluation phase, I moderated several usability testing sessions, and <span class="highlight highlight-up">was in charge of analyzing & synthesizing the data we collected and deriving design recommendations from them.</span>
+                  </p>
+              </div>
+
+              <div id="design-outcome" class="subgroup">
+                <h4>Design Outcome</h4>
+              </div>
+
+          </section>
+        </div>
+        <img class="img-responsive full-screen-img" src="../../assets/up-design-outcome.png" alt="Design Outcome"><br><br>
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+          <section class="group">
+            <div class="subgroup">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row">
+                <p style="text-align:center;"><a href="#final-design" class="btn black-button" type="button" name="Up button">Jump to Final Design</button></a></p><br><br>
+              </div>
+            </div>
+
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <section id="research" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>Research</h3>
+              <hr>
+              <div class="subgroup">
+                <p>We started with a vague idea of designing an intervention to help relieve Georgia Tech's students' stress. After our interview with mental health experts on campus, we narrowed our idea down to creating <span class="highlight highlight-up">a collective breathing intervention</span> for stress relief.</p>
+              </div>
+
+              <div id="expert-interview" class="subgroup">
+                  <h4>Expert Interview</h4>
+                  <p>To get an overview of Georgia Tech's students' stress level and the current intervention methods, we conducted <span class="highlight highlight-up">a semi-structured interview with a mental health expert at Georgia Tech's counseling center.</span> Having worked in the counseling center for over 20 years, our expert deeply understands where the student stress comes from, and has tried various ways to help improve students' mental health state on campus. <br><br>
+
+                  In our interview, we asked our expert about general trends in students' stress level, current practices at the counseling center for stress relief, and challenges faced by the counseling center. Our main take-aways include:</p>
+
+                  <img class="img-responsive full-img" src="../../assets/up-expert-all.png" alt="All expert advice"><br><br>
+
+                  <p>Since community-based peer support and simple relaxation techniques are proven to be effective, <span class="highlight highlight-up">we hope to use technology to promote them so that more students have easy access to resources for stress relief.</span></p>
+
+                  <p>After another unstructured interview with a Professor in Health Informatics, <span class="highlight highlight-up">we decided to focus on creating a collective breathing intervention</span> to encourage students to do deep breathing exercises together in the community. The research literature has consistently shown that deep breathing is a simple but effective way to relieve one's stress. <span class="highlight highlight-up">Our idea is to not only encourage students to do breathing exercises, but also let them support each other throughout the process.</span></p>
+              </div>
+
+
+              <div id="comp-analysis" class="subgroup">
+                <h4>Competitive Analysis</h4>
+                <p>We first conducted a competitive analysis of existing individual breathing exercises and games on various platforms. </p>
+                <img class="full-img img-responsive"src="../../assets/up-comp-icons.png" alt="Competitive analysis"><br><br>
+
+                <p class="p-center-wrapper"><button data-toggle="collapse" data-target="#comp1-details" class="btn black-button" name="Up button">See Detailed Analysis</button></p>
+
+                <div class="collapse" id="comp1-details">
+                  <img class="img-responsive full-img"src="../../assets/up-comp-analysis-exercises.png" alt="Competitive analysis of breathing exercises"><br><br>
+                </div>
+
+                <p class="small-margin-bottom">From the analysis, we learned that:</p>
+                <ul>
+                  <li><span class="highlight highlight-up">Effective audio/visual/haptic breathing cues</span> are important for breathing apps.</li>
+
+                  <li>Creating <span class="highlight highlight-up">immersive experiences</span> for users might lead to extra calming effect.</li>
+
+                  <li>Users need <span class="highlight highlight-up">appropriate & positive feedback on their breathing performance</span> in order to learn the breathing techniques.</li>
+
+                  <li><span class="highlight highlight-up">A variety of sensors are available</span> to measure users' breaths/stress level.</li>
+                </ul>
+
+                <p>To our knowledge, there is no existing community-based breathing exercise available. To get more inspirations on designing community-based interventions, <span class="highlight highlight-up">we conducted another competitive analysis focusing on community-based health interventions</span>.</p>
+
+                <img class="full-img img-responsive"src="../../assets/up-comp-icons-2.png" alt="Competitive analysis"><br><br>
+
+                <p class="p-center-wrapper"><button data-toggle="collapse" data-target="#comp2-details" class="btn black-button" name="Up button">See Detailed Analysis</button></p>
+
+                <div class="collapse" id="comp2-details">
+                  <img class="img-responsive full-img"src="../../assets/up-comp-analysis-community.png" alt="Competitive analysis of community-based interventions"><br><br>
+                </div>
+
+              <div class="subgroup">
+                <p class="small-margin-bottom">The main take-aways from the second competitive analysis include:</p>
+
+                <ul>
+
+                  <li>The auditory components of Pulse of the City and Yog create <span class="highlight highlight-up">a sense of connectedness</span>; we could possibly incorporate <span class="highlight highlight-up">audio</span> into our design as well.</li>
+
+                  <li>There are different approaches to designing a community experience. Existing solutions have used anonymous peer to peer network, public art installations, existing social network, etc. <span class="highlight highlight-up">Our team should consider multiple strategies in the ideation phase, and narrow them down based on what is suitable for our specific purpose, as well as feedback we get from our users</span>.</li>
+                </ul>
+
+
+              </div>
+
+              <div id="lit-review" class="subgroup">
+                <h4>Literature Review</h4>
+                <p>We looked into studies that focus on designing technologies that encourage people to practice breathing techniques. The literature review helps us find various ways of measuring people's breathing patterns and presenting feedback to them.</p>
+                <h5>Measuring Breaths:</h5><br>
+
+                <img class="img-responsive full-img"src="../../assets/up-sensors.png" alt="Sensors"> <br><br>
+
+                <h5>Presenting Breath Data:</h5><br>
+                <img class="img-responsive full-img"src="../../assets/up-lit-presenting-data.png" alt="Sensors"> <br><br>
+
+
+              </div>
+
+
+              <div id="interviews" class="subgroup">
+                <h4>Interviews</h4>
+                <p class="small-margin-bottom">To learn more about our target users, <span class="highlight highlight-up">I took the lead to conduct several semi-structured interviews</span> with Georgia Tech undergraduate and graduate students. Some of our main findings include:
+                </p>
+                <ul>
+                  <li><span class="highlight highlight-up">School work and social life</span> are the main sources of stress for most students.</li>
+                  <li>Most participants have heard of mindfulness and breathing exercises. However, <span class="highlight highlight-up">none of them perform these activities regularly as a method for stress intervention</span>.</li>
+                  <li><span class="highlight highlight-up">Immersive experience</span>, whether it’s playing competitive video games, reading, or listening to music, helps students forget about their stress and concentrate on what they enjoy at the moment.</li>
+                </ul>
+                <p>Our findings motivated us to design breathing interventions that are <span class="highlight highlight-up">immersive</span> and <span class="highlight highlight-up">easy to learn</span>. It also confirmed that <span class="highlight highlight-up">motivating students to do breathing exercises together can be one effective way to relieve their stress</span>, because most students have heard about breathing exercise and have positive associations with it.</p>
+              </div>
+
+              <div id="persona" class="subgroup">
+                <h4>Persona</h4>
+                <p>After summarizing and analyzing the interview results with my teammates, <span class="highlight highlight-up">I took the lead to create the following personas to help us guide our design.</span> </p>
+                <img class="img-responsive full-img"src="../../assets/up-persona-1.png" alt="Persona-1"> <br><br>
+                <img class="img-responsive full-img"src="../../assets/up-persona-2.png" alt="Persona-2">
+              </div>
+
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="design" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>Design</h3>
+              <hr>
+
+              <div id="ideation" class="subgroup">
+                <!-- needs: easy to put on... feedback.. -->
+                <h4>Ideation</h4>
+                <p>As a group, we conducted a design-studio-style workshop to brainstorm potential solutions. Group members were given <span class="highlight highlight-up">two 10-minute sessions to sketch out as many ideas as possible</span>. We then each presented our ideas, grouped similar ideas on the whiteboard, and offered critique to each other's ideas.
+                </p>
+                <img class="img-responsive full-img"src="../../assets/up-ideation.jpg" alt="ideation"><br><br>
+                <p>Here's a summary of the ideas generated. Ideas that are selected and combined into our final concepts are marked in red.</p>
+              </div>
+          </section>
+        </div>
+
+        <img class="img-responsive large-img"src="../../assets/up-mind-map-transparent.png" alt="Mind map of ideas generated">
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content"> <br><br>
+          <section class="group">
+            <div id="design-alts" class="subgroup">
+              <h4>Design Alternatives</h4>
+              <p class="small-margin-bottom">Based on our user research data, we reviewed our ideas based on a few key criteria including:</p>
+              <ul>
+                <li><span class="highlight highlight-up">Creativity:</span> whether the idea is interesting/immersive enough to motivate students to perform the exercise</li>
+                <li><span class="highlight highlight-up">Effectiveness: </span>whether the solution can effectively bring the community together and help reduce students' stress</li>
+                <li><span class="highlight highlight-up">Convenience:</span> whether students can take a break to breathe when and where they need it</li>
+              </ul>
+              <p>We then came up with low-fidelity prototypes for our top three concepts.</p>
+              <h5>Concept 1</h5>
+              <p><span class="highlight highlight-up">Concept 1 is a collective breathing exercise app that enables users to breathe with their friends or other students on campus.</span> The purpose of this app is to teach users breathing techniques which can help relieve their stress, and to enhance a sense of togetherness by letting them breathe in similar rates/patterns with others. For this idea, users may be able to choose a belt type sensor or a microphone to measure their breathing patterns (in their smartphones). Click to view the <a href="https://projects.invisionapp.com/share/J2EH525HB#/screens">low-fidelity interactive wireframe</a>.</p>
+
+              <img class="img-responsive full-img"src="../../assets/up-concept-1.png" alt="Concept 1"><br><br>
+              <h5>Concept 2</h5>
+              <p>This is a collective, immersive experience that aims to let people (20 max) breathe together in a relaxing environment. Students are able to enter <span class="highlight highlight-up">a pitch dark room</span> and sit on futons, which have pressure sensors and can recognize when a student is sitting on it. After students put on their breathing sensor (belt) around their torso, <span class="highlight highlight-up">they will be able to see their breaths visualized in wave form on a large display screen, which is mostly dark except for the breathing patterns.</span><br><br>
+
+              <img class="img-responsive full-img"src="../../assets/up-concept-2-2.png" alt="Concept 2"><br>
+
+              <span class="highlight highlight-up">Students will hear relaxing sounds of ocean waves that serve as an audio cue</span> to let them know when they should inhale and exhale. In addition, there will hear <span class="highlight highlight-up">a soothing background music</span>, which is composed of a progression of simple music chords. The chords will become richer and richer as more people sit down and start to breathe; <span class="highlight highlight-up">each person will contribute to part of the chord, so that the experience becomes even more immersive and relaxing as more people join.</span><br><br>
+
+              In addition, we also hope to make this experience part of <span class="highlight highlight-up">a fundraising process</span>. We will let students know that when they breathe inside, they will be able to raise money for those in need of electricity. When they come out, they can see what they’ve contributed by breathing and relaxing themselves, which will motivate them to return and breathe more in the future.
+              </p>
+
+              <img class="img-responsive full-img"src="../../assets/up-concept-2.png" alt="Concept 2"><br><br>
+
+
+
+              <h5>Concept 3</h5>
+              <p>Our third concept is a mobile breathing game. <span class="highlight highlight-up">Users are able to turn their sources of stress into a kite, and then breathe to fly the kite and "blow their stress away."</span> They can play the game with friends they know, or anonymous players on campus, using either a belt sensor or a microphone as input. After successfully completing each breathing session, users are rewarded with points based on their breathing quality, and <span class="highlight highlight-up">can use the points to customize their kites.</span> Click to view the <a href="https://projects.invisionapp.com/share/9FEGZ2NJR#/screens/264031619_01onboarding1">low-fidelity interactive wireframe</a>.</p>
+
+              <img class="img-responsive full-img"src="../../assets/up-concept-3-cleaner.png" alt="Concept 3"><br><br>
+
+            </div>
+
+            <div id="feedback" class="subgroup">
+              <h4>User Feedback</h4>
+              <p>We presented our 3 ideas to potential users at Georgia Tech and gathered both qualitative and quantitative feedback. For Concept 1 and 3, <span class="highlight highlight-up">we let users interact with our interactive wireframes</span>; for Concept 2, <span class="highlight highlight-up">we walked users through our storyboard, played them a <a href="https://www.youtube.com/watch?v=Dx9Pxyphup8&t=20s&index=44&list=WL">sample background music</a> , and presented them with a  <a href="https://www.youtube.com/watch?v=9u-cM8daUKA">sample visualization video</a></span> so that they can get a feel of the immersive environment (we let them know that we will create our own visualization with similar colors but more relaxing patterns if we choose concept 2 as our final concept). Users were encouraged to <span class="highlight highlight-up">think aloud</span> during the process.</p>
+
+              <p>After presenting each idea, we asked users to rate how frequently they'd use the solution, how effective they think it would be, and how likely they would recommend the solution to a friend. We also asked their favorite/least favorite part of each solution, and let them compare the three solutions. We created <span class="highlight highlight-up">an affinity diagram</span> based on the qualitative results we got.</p>
+
+              <img class="img-responsive full-img"src="../../assets/up-affinity.jpg" alt="Affinity Diagram"><br><br>
+
+              <p><span class="highlight highlight-up">Users unanimously preferred Concept 2 and 3 over Concept 1</span>. Some mentioned that Concept 1 is similar to Concept 3, but the latter is more engaging because of the gamification factor. <span class="highlight highlight-up">Therefore, we focused our analysis on comparing Concept 2 and Concept 3</span>. The user feedback is summarized below.</p>
+
+              <img class="img-responsive full-img"src="../../assets/up-pros-cons.png" alt="Pros and Cons of Concept 2 and 3"><br><br>
+
+              <p class="small-margin-bottom">Based on user feedback, we decided to modify and go ahead with <span class="highlight highlight-up">Concept 3</span> (Collective Breathing Game App) because:</p>
+
+              <ul>
+                <li>Almost every student owns a smartphone. <span class="highlight highlight-up">Having an app on one's phone makes it more convenient to perform breathing exercises when needed</span>.</li>
+                <li>The breathing visualization in the game is <span class="highlight highlight-up">more concrete</span> than in the pitch-dark room.</li>
+                <li>Prototyping and creating a mobile app is <span class="highlight highlight-up">more feasible and less expensive, but equally effective</span> based on user feedback; if we created one or several dark rooms for breathing intervention, GT has to provide the space for us.</li>
+              </ul>
+
+              <p>We also decided to <span class="highlight highlight-up">make the following changes to Concept 3 to address some of its drawbacks</span> identified through user feedback:</p>
+
+              <img class="img-responsive full-img" src="../../assets/up-concept-decision.png" alt="Concept decision"><br><br>
+            </div>
+
+            <div id="info-arch" class="subgroup">
+              <h4>Information Architecture</h4>
+
+              <p>We then created our final <span class="highlight highlight-up">information architecture</span>:</p>
+
+            </div>
+        </section>
+      </div>
+
+      <img class="img-responsive large-img"src="../../assets/up-info-arch.png" alt="Information Architecture">
+
+      <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content"> <br><br><br><br>
+        <section class="group">
+
+            <div id="final-design" class="subgroup">
+              <h4>Final Design</h4>
+
+              <p>The game involves an initial setup process, which creates a personalized experience for users to <span class="highlight highlight-up">select a specific source of stress and a sensor</span> to measure the input. After going through a simple tutorial, users will be able to select the gameplay mode <span class="highlight highlight-up">to play with either peer support or just by themselves.</span></p>
+
+              <img class="img-responsive full-img"src="../../assets/up-design-1.png" alt="Final design"><br><br>
+
+              <div class="video-wrapper">
+                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/nJHQlY_3CuU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+              </div> <br><br>
+
+
+              <p>We then provide options for users to play with either friends they are familiar with or others from the same school. In order to encourage users to use the multiplayer mode and gain peer support, we provide <span class="highlight highlight-up">more customization options for the background of the breathing scene when more players are involved</span> in the game. Then, users can immerse themselves in the game, with <span class="highlight highlight-up">a nice nature background illustration</span> and <span class="highlight highlight-up">relaxing nature sound</span> in the background. At the end of the game, the users will be <span class="highlight highlight-up">rewarded based on how well the group did together</span>. Finally, they can use the reward to <span class="highlight highlight-up">customize their own balloons</span>, an incentive designed to promote a prolonged engagement.</p>
+
+              <img class="img-responsive full-img"src="../../assets/up-design-2.png" alt="Final design"><br><br>
+
+              <div class="video-wrapper">
+                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/n_PT3tOIl38" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+              </div> <br><br>
+            </div>
+
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <section id="evaluate" class="group" data-aos="fade-up" data-aos-duration="600">
+            <h3>Evaluate</h3>
+            <hr>
+
+            <div id="usability" class="subgroup">
+              <h4>Usability Testing</h4>
+              <p class="small-margin-bottom">To evaluate our design, we conducted several <span class="highlight highlight-up">usability testing sessions</span> with our target users, Georgia Tech students. After explaining the purpose of the project and asking them some demographic questions (student status, perceived stress level, etc.), we gave them the following tasks to complete in sequence:</p>
+
+              <ul>
+                <li>Task 1: Select job-seeking as source of stress and microphone as your sensor. Then complete the tutorial.</li>
+                <li>Task 2: Find other players who might be interested in playing the game with you.</li>
+                <li>Task 3: Play the game and user your reward.</li>
+              </ul>
+
+              <img class="img-responsive full-img"src="../../assets/up-usability.png" alt="Usability Testing"><br><br>
+
+              <p class="small-margin-bottom">We then asked them about their experiences playing the game, how frequently they would use the solution once it's refined, how effective they think the solution is, and whether they'd like to recommend the app to their friends. We also let them comment on their favorite/least favorite parts of the design, and complete the System Usability Scale (SUS).<br><br>
+
+              In general, users liked our design and gave <span class="highlight highlight-up">an average SUS score of 88.13</span>, much higher than the average SUS score (68). Specifically, users liked it because:</p>
+
+              <ul>
+                <li>It's a <span class="highlight highlight-up">fun and intuitive</span> way to teach people deep breathing techniques.</li>
+                <li>The application is <span class="highlight highlight-up">simple and easy to use</span>.</li>
+                <li>The game design is <span class="highlight highlight-up">visually attractive</span>.</li>
+                <li>The background music is <span class="highlight highlight-up">soothing</span> and can <span class="highlight highlight-up">disconnect users from the outside world</span> so that they can focus on their breaths.</li>
+                <li>It encourages users to <span class="highlight highlight-up">support each other</span> in stress relief.</li>
+              </ul>
+
+              <p class="small-margin-bottom">Users also identified several problems: </p>
+              <ul>
+                <li>Users need <span class="highlight highlight-up">more incentives to continuously engage with the app</span> and get maximum benefits from it.</li>
+                <li>Some users want <span class="highlight highlight-up">more modes of gameplay</span>.</li>
+                <li>The 3s-9s (inhale-exhale) breathing pattern was intuitive for some users, but not others.</li>
+                <li>Users typically focus their attention on the breathing indicator, <span class="highlight highlight-up">not noticing the stress source they are trying to get rid of, or other people who are helping them relieve their stress</span>.</li>
+                <li>The app can only temporarily relieve people's stress and put them in a better mood; <span class="highlight highlight-up">it cannot and should not aim to help people really get rid of their stress source</span>.</li>
+              </ul>
+
+            </div>
+
+            <div id="future-directions" class="subgroup">
+              <h4>Future Directions</h4>
+              <p class="small-margin-bottom">Based on users' feedback, we decide to make the following changes to our app in the future:</p>
+            </div>
+        </section>
+      </div>
+
+      <img class="img-responsive large-img"src="../../assets/up-future.png" alt="Future Directions">
+
+      <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content"> <br><br>
+        <section class="group">
+
+
+
+              <!-- <ul>
+                <li><span class="highlight highlight-up">Add incentives for long-term engagement:</span> to make the intervention effective, we need to encourage users to play the game in the long-term. We can achieve this by:
+                  <ul>
+                    <li><span class="highlight highlight-up">Designing more gameplay modes and creating a better reward system:</span> </li>
+                  </ul>
+                </li>
+              </ul> -->
+            </div>
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+    <div class="container-fluid">
+      <div class="row footer-row">
+        <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a class="hvr-underline-from-left" href="../home.html#my-work" >All</a> /
+            <a class="hvr-underline-from-left" href="./eatxplore.html">Eatxplore</a> /
+            <a class="hvr-underline-from-left" href="./photos.html">Google Photos Redesign</a> /
+            <a class="hvr-underline-from-left" href="./mirror-mirror.html">Mirror Mirror</a> /
+            <a class="hvr-underline-from-left" href="./THD.html">My Home Depot Internship</a> /
+            <a class="hvr-underline-from-left" href="./cook-fresh.html" >Cook Fresh</a> /
+            <a class="selected-footer" href="./up-up.html" >Up & Up</a> /
+            <a class="hvr-underline-from-left" href="./rei-backpack.html" >REI Backpack Finder</a> /
+            <a class="hvr-underline-from-left" href="./thriller.html" >The Resurrected</a>
+          </p>
+          <br>
+          <br>
+          <p class="footer-text">Designed and Handcoded with ♥ and ♫</p>
+        </div>
+        <div class="footer-icons col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a href="https://dribbble.com/yanfengjin" target="_blank"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/yanfeng-jin-tony-80533455/" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@yanfengjin" target="_blank"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+            <a href="mailto:yjin@gatech.edu" target="_blank"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a>
+          </p>
+          <br>
+          <p class="footer-text-small">Tony Yanfeng Jin © 2017-2018 All Rights Reserved</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+</html>

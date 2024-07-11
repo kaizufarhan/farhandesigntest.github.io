@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111016994-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111016994-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <title>Google Design Challenge | Yanfeng Jin (Tony)</title>
+
+
+
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="shortcut icon" type="image/x-icon" href="../../assets/icon-tab.ico">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel = "stylesheet" type = "text/css" href = "../../css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../../css/fonts.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../../css/zoom.css" rel="stylesheet">
+    <script src="../../js/transition.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://use.fontawesome.com/a891bb0a11.js"></script>
+    <script src="../../js/script.js" charset="utf-8"></script>
+    <script src="../../js/pass.js" charset="utf-8"></script>
+
+
+
+    <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1409449789");
+    </script>
+
+  </head>
+
+  <body>
+    <div class="spinner-wrapper">
+      <div class="p-center-wrapper">
+        <div class="la-line-scale la-dark">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <h4 id="preloader-title"></h4>
+            <h5 id="preloader-content"></h5>
+        </div>
+
+      </div>
+
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-nav">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../home.html">Tony Jin</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="collapsible-nav">
+        <ul class="nav navbar-nav">
+          <li><a class="selected hvr-underline-from-left" href="../home.html#my-work">Projects</a></li>
+          <li><a class="hvr-underline-from-left" href="../../assets/Yanfeng-Jin-Resume-v8.3.pdf" target="_blank">Resume</a></li>
+          <li><a class="hvr-underline-from-left" href="https://medium.com/@yanfengjin" target="_blank">Writings</a></li>
+          <li><a class="hvr-underline-from-left" href="../about-me.html">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 50px">
+        <nav class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <div class="bs-docs-sidebar">
+            <ul class="nav nav-stacked"id="sidebar">
+
+              <li>
+                <a href="#overview">Overview</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#problem">Problem</a></li>
+                  <li><a href="#solution">Solution</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#research">Research</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#scope">Project Scope & Audience</a></li>
+                  <li><a href="#background">Background Research</a></li>
+                  <li><a href="#interviews">User Interviews & Analysis</a></li>
+                  <li><a href="#personas">Personas</a></li>
+                  <li><a href="#design-goals">Design Goals</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#design">Design & Iterations</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#ideation">Ideation</a></li>
+                  <li><a href="#report-issue">How to Simplify the Report Process?</a></li>
+                  <li><a href="#motivate-public-requests">How to Motivate Users to Submit Public Requests?</a></li>
+                  <li><a href="#wireframes">Wireframe Flow</a></li>
+                  <li><a href="#feedback">User Feedback & Iteration</a></li>
+                  <li><a href="#final-design">Final Design</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#future-steps">Future Steps</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#other-stakeholders">Considering Other Stakeholders</a></li>
+                  <li><a href="#reward-concerns">Concerns about the Reward System</a></li>
+                  <li><a href="#edge-cases">Considering All Cases</a></li>
+                  <li><a href="#generalize">Generalizing to Other Communities</a></li>
+                  <li><a href="#crowdsource">Crowdsourced Help</a></li>
+                  <li><a href="#future">Envisioning the Future</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+
+
+        <div class="bg bg-google" data-aos="fade-up" data-aos-duration="600"></div>
+        <div class="jumbotron" data-aos="fade-up" data-aos-duration="600">
+          <div class="jumbotron-text">
+          </div>
+        </div>
+
+
+
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content first-section">
+
+
+          <section id="overview" class="group" data-aos-duration="600">
+            <h3>Overview</h3>
+            <hr>
+            <div id="problem" class="subgroup">
+              <h4>Problem</h4>
+              <p class="small-margin-bottom">For students and young professionals living in apartments, <span class="highlight highlight-google">it is hard to submit maintenance requests, track their statuses, and get quick help on small things.</span> Public facilities also fail from time to time, but <span class="highlight highlight-google">few people would report them</span>, leaving them broken for days or weeks.</p><br>
+            </div>
+
+            <div class="row">
+              <div  class="subgroup-left-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                  <h4 id="solution">Solution</h4>
+                  <p>I designed an app with <span class="highlight highlight-google">AI chatbot and voice control</span>, so that residents can <span class="highlight highlight-google">quickly report issues in a natural way</span>. Users can also track their request status and maintain open communication with maintenance staff and their roommates. I also incorporated a <span class="highlight highlight-google">reward mechanism</span> to motivate users to report public issues and contribute to the community.</p>
+              </div>
+
+              <div class="subgroup-right-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h4>Timeline</h4>
+                <p>7 Days</p>
+                <h4>Project Info</h4>
+                <p>Google Design Exercise</p>
+                <h4>Tools</h4>
+                <p>Sketch, Marvel, InVision, Principle, Realtime Board (Miro), Paper & Pen</p>
+
+                <br>
+                <br>
+              </div>
+            </div>
+
+            <div class="subgroup">
+              <div class="row feature-row">
+                  <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                    <video autoplay muted loop class="video-features-google">
+                      <source src="../../assets/google-design-outcome-1.mp4"/>
+                    </video>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                    <h5 class="video-feature-title-google video-feature-title-photos">
+                      You Say It, We Solve It.
+                    </h5>
+
+                    <h6 class="video-feature-subtitle">
+                      Describe the issue the way you want, and we'll help you resolve it fast
+                    </h6>
+
+                    <p class="video-feature-content">Just describe the problem by talking, taking a photo, or typing. Our chatbot suggests frequent issues and autocompletes any request you enter. For simple requests, we'll suggest short video clips and articles from online. Submitting and resolving an issue has never been faster.</p>
+                  </div>
+                </div>
+
+
+                <div class="row feature-row">
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        Know What to Expect
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Know who's coming to help you, and when things will get fixed.
+                      </h6>
+
+                      <p class="video-feature-content">Afraid to shower or sleep because you don't know when maintenance will come? Don't know when you could use your kitchen faucet again? Now, you can track the status, edit your requests, and connect with the person assigned to your request.</p>
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features-google">
+                        <source src="../../assets/google-design-outcome-2.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+
+                <div class="row feature-row">
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features-google">
+                        <source src="../../assets/google-design-outcome-3.mp4"/>
+                      </video>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        Contribute and Earn Rewards
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Report public issues to earn the community's appreciation and gift cards
+                      </h6>
+
+                      <p class="video-feature-content">By reporting public issues, you are helping the community maintain its facilities and get issues fixed faster, benefiting everyone around you. You'll also earn points that you can use to redeem a variety of gift cards and discount.</p>
+                    </div>
+                </div>
+
+                <div class="row feature-row">
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        Works with Google Home
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        No need to open the app. Let Google help you handle it.
+                      </h6>
+
+                      <p class="video-feature-content">We know that opening your browser or your app to report an issue sounds annoying. Don't worry, just say your complains out loud, and our Google Assistant Action will help you create, track, and follow up with any issue.</p>
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <img class="img-responsive full-img" src="../../assets/google-scenario-home.png" alt="google-feedback-quote"> <br><br>
+                    </div>
+                </div>
+                <p class="p-center-wrapper"><a href="#final-design"><button class="btn black-button" name="button">Jump to Final Design</button></a> </p>
+            </div>
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+
+          <section id="research" class="group" >
+            <div data-aos="fade-up" data-aos-duration="600">
+              <h3>Research</h3>
+              <hr>
+
+              <div id="scope" class="subgroup">
+                <h4>Project Scope & Audience</h4>
+                  <p>Because of the time limit of the exercise, I started by setting the scope and target audience for myself, and making a couple of assumptions to keep me focused. <br><br>
+                  </p>
+
+                  <h5 class="google-h5">Target Audience</h5>
+                  <p>I decided to target an apartment in Midtown Atlanta because of my easy access to users. The community is <span class="highlight highlight-google">young, lively, busy, and full of energy</span>, and its residents are mostly students and young professionals. The apartment has its own maintenance staff that will handle residents' maintenance requests.<br><br>
+
+                  Ideally, the product would satisfy the needs of all stakeholders involved, including residents, maintenance staff, and the company that owns the apartments. <span class="highlight highlight-google">Since I had limited access to the latter two, I based my design mostly on user needs, but also tried to look online to try my best to consider the needs of other stakeholders.</span>
+                   </p>
+
+                  <h5 class="google-h5">Assumptions</h5>
+                  <p class="small-margin-bottom">To scope my design, I also made the following assumptions:</p>
+
+                  <ul>
+                    <li>There is <span class="highlight highlight-google">a digital inventory</span> with the community's facilities and their detailed information (location, repair history, etc.)</li>
+                    <li>Each user has <span class="highlight highlight-google">an account that will be linked to their apartment number and their maintenance history.</span></li>
+                    <li>I could leverage <span class="highlight highlight-google">existing machine learning algorithms</span> (computer vision, voice recognition, autocomplete, etc.) in my solution if the implementation effort is worth the results.</li>
+                  </ul>
+
+                  <h5 class="google-h5">Focus</h5>
+                  <p>I discovered a variety of edge cases as I delved into the problem deeper. Because of the time limitation, <span class="highlight highlight-google">I decided to demonstrate my solution through mostly normal use cases. I also considered edges cases and will describe them in future steps.</span><br><br>
+
+                   </p>
+
+              </div>
+
+              <div id="background" class="subgroup">
+                  <h4>Background Resesarch</h4>
+                  <br>
+                  <h5 class="google-h5">Leveraging Online Resources</h5>
+                  <p>In order to quickly understand the design space within the time limit, I started by Googling <a href="https://www.althoffind.com/blog/ultimate-guide-to-emergency-repair-vs.-maintenance-request" target="_blank">articles related to general maintenance request</a>. The articles helped me <span class="highlight highlight-google">understand how things work from the maintenance staff's perspective</span>, as well as <span class="highlight highlight-google">get to know different issues that users encounter</span>. They also helped me frame my initial user interview questions.<br><br>
+
+                  I also <span class="highlight highlight-google">tried out a couple of maintenance request systems and apps I have access to</span>. They helped me get a quick idea of a range of community issues that might happen and how different communities currently handle maintenance requests.</p>
+                </div>
+              </section>
+            </div>
+
+            <img class="img-responsive large-img" src="../../assets/google-competitive-1.png" alt="design goals"> <br><br>
+
+
+            <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+              <section class="group">
+                <div class="subgroup">
+
+                  <h5 class="google-h5" id="random-ideas">Keeping Ideas Open</h5>
+                  <p><span class="highlight highlight-google">What I found useful from my recent design experiences is to first start a document with all my random ideas related to the topic and keep updating it whenever any new ideas come to my mind as I'm reading, researching, wandering around, or even showering.</span> By tidying up these ideas, I found a number of assumptions and opportunities that ended up inspiring my user interview questions and my ideation session.</p>
+
+                  <img class="img-responsive full-img" src="../../assets/google-random-ideas.png" alt="design goals"> <br><br>
+
+
+
+
+              </div>
+
+              <div id="interviews" class="subgroup">
+                  <h4>User Interviews & Analysis</h4>
+                  <p>I conducted quick interviews with residents living in a local apartment in Midtown Atlanta. The goals was to 1) <span class="highlight highlight-google">understand problems users encounter when reporting issues about public and private facilities in the community</span> and 2) <span class="highlight highlight-google">uncover deeper human needs that lie behind those frustrations so that my design can address them</span><br><br>
+
+                  I analyzed the results by <a href="https://realtimeboard.com/app/board/o9J_k0QtRno=/" target="_blank">creating an affinity map in Miro (formerly RealtimeBoard)</a>. With the results, I created the following personas and formulated my design goals.
+                   </p>
+
+                   <p class="p-center-wrapper"><a href="https://docs.google.com/document/d/1DykjfZL34-8Z07m71lusCozqtEwMgsXUsKFzhdD3o2A/edit?usp=sharing" target="_blank"><button class="btn black-button" name="button">View Interview Script</button></a> </p><br><br>
+
+
+
+              </div>
+
+              <div id="personas" class="subgroup">
+                  <h4>Personas</h4>
+                  <p class="small-margin-bottom"><span class="highlight highlight-google">Issues regarding a residential community can get really personal.</span> That's why I represented the research results using the following personas, to help me <span class="highlight highlight-google">empathize with my users.</span></p>
+
+                </div>
+              </section>
+            </div>
+
+            <img class="img-responsive large-img" src="../../assets/google-persona-1.png" alt="design goals"> <br><br>
+            <img class="img-responsive large-img" src="../../assets/google-persona-2.png" alt="design goals"> <br><br>
+
+
+            <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+              <section class="group">
+                <div class="subgroup">
+
+
+              </div>
+
+              <div id="design-goals" class="subgroup">
+                  <h4>Design Goals</h4>
+                  <p>To help me <span class="highlight highlight-google">maintain focus during the design phase</span>, I derived <span class="highlight highlight-google">four overall design goals</span> that will address the needs and frustrations encountered by my target audience. Again, I intentionally made the goals <span class="highlight highlight-google">highly personal</span>, starting from the user's feelings, emotions and motivations to make sure that my design doesn't only touch upon the surface of the problems. <span class="highlight highlight-google">If I were to evaluate the success of my design, these goals would also become part of my success metrics.</span></p>
+
+                  <img class="img-responsive full-img" src="../../assets/google-design-goals.png" alt="google-design-goals"> <br><br>
+
+              </div>
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="design" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>Design & Iterations</h3>
+              <hr>
+              <div class="subgroup">
+                <p class="small-margin-bottom">With the personas and design goals in mind, I started brainstorming potential solutions that will address each design goal.</p>
+              </div>
+
+              <div id="ideation" class="subgroup">
+                <h4>Ideation</h4>
+                <p>For each goal, I started writing and sketching down potential solution that can address these goals. At this stage, <span class="highlight highlight-google">I didn't consider the feasibility of the ideas</span>, but rather took down anything that came to my mind. I also combined these new ideas with the ideas I randomly jotted down <a href="#random-ideas">during the intial research phase</a>.</p>
+
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive full-screen-img" src="../../assets/google-ideation-ideas.png" alt="competitive products"><br><br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+
+              <div class="subgroup">
+                <p>I also <span class="highlight highlight-google">walked "mindfully" around the apartment building</span>, going into different common spaces and try to use those facilities. <span class="highlight highlight-google">This enabled me to consider a variety of scenarios</span>, from missing coffee packets to broken equipments in the gym. <br><br>
+
+
+                I then <span class="highlight highlight-google">referred back to my design goals and thought about how the features I came up with would work together to meet the goals.</span> I also categorized my ideas into <span class="highlight highlight-google">yes, no, and future steps</span> based on their <span class="highlight highlight-google">potential benefits versus the implementation feasibility/cost.</span> <br><br>
+
+                I eventually decided to create <span class="highlight highlight-google">an app together with a Google Home Action</span> to address the problems I identified. I'll highlight a couple of challenges and important decisions below.
+                </p>
+
+                <p class="p-center-wrapper"><button data-toggle="collapse" data-target="#why-app" class="btn black-button" name="button">Why Designing an App?</button></p>
+
+                <div class="collapse" id="why-app">
+                  <p class="small-margin-bottom">Some might argue that the users might not want to install another app on their phone just for submitting maintenance requests. While that is a valid point, I still decided to use an app instead of the other alternative, a website for several reasons:
+                  </p>
+                  <ul>
+                    <li>One of my goals is to <span class="highlight highlight-google">encourage users to submit public issues</span>. Assuming that users would mostly <span class="highlight highlight-google">submit issues immediately when and where they notice them</span>, I decided that mobile app is the easiest platform to access in this context.</li>
+
+                    <li><span class="highlight highlight-google">The perceived effort for submitting a request is lower on app.</span> One user told me that he didn't even want to submit issues about his own apartment because "it's too much effort to start my computer and search for how to do it." In an app, however, users can just take out their phone and enter it anywhere, or <span class="highlight highlight-google">even use voice commands</span> (with Google Assistant, Siri, etc.)</li>
+
+                    <li>Sometimes users use photos to explain the problem. <span class="highlight highlight-google">It is much easier to take a photo and annotate it on an app compared to a website (desktop or mobile).</span></li>
+
+
+
+                  </ul>
+                  <p>To further motivate the use of the app, I could <span class="highlight highlight-google">envision the app to be a central place to build a great community</span>, including functions not only about maintenance requests, but also about events nearby, discussions with neighbors, etc. However, <span class="highlight highlight-google">the scope of such a project and the feasibility of it can be further discussed.</span></p>
+                </div>
+              </div>
+
+              <div id="report-issue" class="subgroup">
+                <h4>Challenge Highlight: How to Simplify the Report Process?</h4>
+                <p class="small-margin-bottom">Whether for public issues or private issues, one of the largest frustrations users have right now is that <span class="highlight highlight-google">the reporting process is really complicated.</span> In fact, there is currently a "conflict" between residents' needs and maintenance staff's needs.
+                 </p>
+
+                 <img class="img-responsive full-img" src="../../assets/google-resident-maintenance-conflict.png" alt="design goals"> <br><br>
+
+
+
+                <p><span class="highlight highlight-google">Current reporting tools typcially ensures the detailedness of the description</span> by having users classify the issue into categories and sub-categories, and select the detailed location of the problem from a predefined location list.<br><br></p>
+
+
+                <img class="img-responsive full-img" src="../../assets/google-current-systems.png" alt="design goals"> <br><br>
+                <p class="small-margin-bottom">
+
+                However, <span class="highlight highlight-google">the categorization is not clear to most users</span>, and all of them spend a long time going through each list with dozens of items, trying to report a simple issue. If the issue's not an emergency, <span class="highlight highlight-google">a lot of them even give up or not bother reporting</span>, whether it's a private issue or a public issue. <br><br>
+
+                <strong>The challenges ultimately comes down to two questions:</strong>
+                </p>
+
+                <ul>
+                  <li>How can we design a reporting process that is <span class="highlight highlight-google">quick and easy for users to go through</span>, but also <span class="highlight highlight-google">ensures that the maintenance staff get enough information</span>? </li>
+
+                  <li>How can we also make sure that the solution will be <span class="highlight highlight-google">applicable to all kinds of issues in the community</span>, ranging from broken elevators to cockroach problems to paper jams in a specific printer? </li>
+                </ul>
+
+                <h5 class="google-h5">Design Alternatives: Novel, Simpler Ways for Input</h5>
+
+                <p>With these questions in mind, I started writing & drawing down alternatives. I quickly thought about 2 ways to help users more quickly and accurately identify issues with a particular facility:
+                </p>
+
+                <img class="img-responsive full-img" src="../../assets/google-alternatives-1.png" alt="google-alternatives-1"> <br><br>
+
+                <p><span class="highlight highlight-google">To minimize user's text input, I chose two methods involving photos.</span> However, these approaches <span class="highlight highlight-google">either require large implementation efforts, or are not quite feasible</span> given the current state of our technology. Still, <span class="highlight highlight-google">taking a photo would help users better describe an issue, especially if they can annotate the photos</span>. Therefore, I kept this idea for further consideration. <br><br>
+
+                I then thought about another way to simplify user's input:
+                </p>
+
+                <img class="img-responsive full-img" src="../../assets/google-alternatives-2.png" alt="google-alternatives-2"> <br><br>
+
+                <p>Overall, voice seems to be especially suitable for our problem, because users already know what the issue is. Instead of letting them find the issue again from a list, it's easier to let them just say it.<br><br>
+
+                <span class="highlight highlight-google">That said, voice cannot be the default input for all cases due to its limitations.</span> I need to provide my users with other options if voice recognition fails, or if they are reluctant to use it in some circumstances. Therefore, <strong><span class="highlight highlight-google">I decided to incorporate voice, and at the same time design a visual UI to let users input information using text and images.</span></strong>
+                </p>
+
+                <h5 class="google-h5">Design Alternatives: What Should Text Input Look Like?</h5>
+
+                <p>To design a more usable text input, I have to make sure users don't have to spend much time figuring out the category of the problem, or which location they should input. <span class="highlight highlight-google">I hope to follow my general design philosophy: to take care of most of their work nearly automatically, with the technology supporting it hidden in the background, and only let users know how the magic happens if they want to learn about it.</span><br><br>
+
+                I started from <span class="highlight highlight-google">several basic design alternatives</span> on how I would structure the issue report page to make it simple for the users, remind users to enter enough information, and support all the use cases for issue report.<br><br>
+
+                Since reporting public issues and private issues might be different, I started from thinking mostly for reporting issues in one's own apartment.
+                </p>
+
+                <img class="img-responsive full-img" src="../../assets/google-text-alts-1.png" alt="google-text-alts-1"> <br><br>
+
+                <p>Another alternative I thought about was to let users <span class="highlight highlight-google">enter the broken facility information first, because that's the first thing that comes to one's mind--that something's broken</span>. Asking the facility first <span class="highlight highlight-google">can also help the system suggest locations to better locate the facility</span> based on where those facilities might be located at (there might be 3 exits on the same floor within the same building, so it's important to specify which one is broken). This can be helpful <span class="highlight highlight-google">especially when GPS cannot help users locate where exactly they are in an indoor setting.</span></p>
+
+                <img class="img-responsive full-img" src="../../assets/google-text-alts-2.png" alt="google-text-alts-2"> <br><br>
+
+                <h5 class="google-h5">Feedback & Pivot: What If Users Don't Need to Fill a Form at All?</h5>
+
+                <p>I took the 4 design alternatives to users to gather some initial feedback. Even though I tried my best to simplify the process, <span class="highlight highlight-google">users still felt that it took them too much effort to fill in the "form" with different fields</span>. One user mentioned:</p>
+
+                <img class="img-responsive full-img" src="../../assets/google-feedback-quote.png" alt="google-feedback-quote"> <br><br>
+
+                <p>The feedback I got <span class="highlight highlight-google">pushed me to think even more about how to further simplify the solution</span>, which is still not quite there yet. If the users don't want to think so much about the different text fields, <span class="highlight highlight-google">can we let them just start by describing the problem in their own way?</span> Based on their input, <span class="highlight highlight-google">we can automatically identify facility names, and suggest locations and common problems based on that.</span></p>
+
+                <img class="img-responsive full-img" src="../../assets/google-text-alts-3.png" alt="google-feedback-quote"> <br><br>
+
+                <p>In this case, the user will have to type in a large text field and nothing else. <span class="highlight highlight-google">This can be both an advantage and a disadvantage.</span> The advantage is that <span class="highlight highlight-google">users don't have to go through several dropdown menus to fill in different information required.</span> The disadvantage is that <span class="highlight highlight-google">in such a blank text field, the users have to type in everything themselves.</span> Though we will suggest location names and reason for failure below, <span class="highlight highlight-google">users will still perceive the task as complicated</span> because of such a large space they think they have to fill. It's also possible that the <span class="highlight highlight-google">users don't end up filling all the required information</span>, so that the maintenance staff will not have enough information about the problem to fix.<br><br>
+
+                Therefore, we need to have something that <strong>allows users to enter the information naturally</strong>, preferrably <strong>short pieces of information</strong>, and <strong>inquire about further details only if necessary</strong>. This sounds like... <br><br>
+
+                <span class="highlight highlight-google"><strong>A chatbot!!!</strong></span>
+                </p>
+
+                <img class="img-responsive full-img" src="../../assets/google-chatbot-advantage.png" alt="google-alternatives-1"> <br><br>
+
+                <p>Though implementing a smart chatbot might be a lot of effort, <span class="highlight highlight-google">the solution does makes it much easier for users to submit a request</span>, which is one of the largest problems I identified through research.<br><br>
+
+                If I had access to engineers, <span class="highlight highlight-google">I would further discuss with them about the implementation difficulty versus the benefits we'll get from the function</span>, to determine whether we should use a chatbot.
+                </p>
+              </div>
+              <div class="subgroup" id="motivate-public-requests">
+
+
+                <h4>Challenge Highlight: How to Motivate Users to Submit Public Requests?</h4>
+
+                <p>Users all complain about public facilities failing, which greatly impact their lives, but <span class="highlight highlight-google">few of my interviewees said that they would report the issue</span>; they either think that others will do it, or think it's too complicated to file the request.<br><br>
+
+                <span class="highlight highlight-google">One way to encourage them to report public issues is to make the reporting process easier, and I have already talked about it in the previous section</span>. However, making it easy is not enough. <strong>If there is no immediate benefit users can see about reporting public issues, most of them still would not do so.</strong> <br><br>
+
+                After generating several ideas, I eventually decided to create a reward mechanism to encourage users.</p>
+
+                <img class="img-responsive full-img" src="../../assets/google-rewards.png" alt="google-rewards"> <br><br>
+
+                <p>
+                I also <span class="highlight highlight-google">evaluated the costs and benefits it will bring to the apartment and its residents</span> to make sure that the two stakeholders involved will accept and benefit from the proposal.
+                </p>
+
+                <img class="img-responsive full-img" src="../../assets/google-rewards-benefits.png" alt="google-rewards"> <br><br>
+              </div>
+
+              <div id="wireframes" class="subgroup">
+                <h4>Wireframe Flow</h4>
+                <p>With more refined initial ideas, I created a wireframe flow and an interactive prototype in Marvel to illustrate the concept. I brought this prototype to a couple of users in order to understand <span class="highlight highlight-google">1) whether my design meets my intial design goals, 2) whether there are situations that I haven't considred, and 3) any feedback users might have on the design concept.</span></p>
+
+                <p class="p-center-wrapper"><a href="https://marvelapp.com/5c722h8" target="_blank"><button class="btn black-button" name="button">View Interactive Wireframe</button></a> </p><br><br>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive full-screen-img" src="../../assets/google-wireframe-flow.png" alt="competitive products"><br><br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+
+              <div id="feedback" class="subgroup">
+                <h4>User Feedback & Iteration</h4>
+                <p>I brought the prototype to 5 users for a quick round of feedback. <span class="highlight highlight-google">The overall feedback was really positive</span>: people believe that this is <span class="highlight highlight-google">a more personal and simple approach</span> to the traditional maintenance request problem, whether it is the chatbot or the profile information about the maintenance staff. They also <span class="highlight highlight-google">feel motivated to contribute to the community with the rewards system</span>, and l<span class="highlight highlight-google">oved the tips from YouTube</span> that can help them troubleshoot simple problems themselves. <br><br>
+
+                My interviewees also brought up some use cases that I had not considered before. One of them actually worked as a maintenance staff before, and provided me lots of great insights from the other perspective. <span class="highlight highlight-google">Due to the time limitation, I couldn't incorporate everything into my final design, but I summarized those insights in future steps.</span> <br><br>
+
+                Below are some recurring problems I identified across all participants' feedback that inspired changes in my design.
+                </p>
+
+                <h5 class="google-h5">Lack of Control</h5>
+                <p>One big issue with the chatbot design is that <span class="highlight highlight-google">initially the chatbot immediately submits a request once it has enough information</span>, and the users can cancel/edit it if needed. My original intention was to make the process faster, so that the chatbot won't have to repeatedly ask for confirmation. However, <span class="highlight highlight-google">all users I asked were not prepared for that.</span> They felt <strong>a loss of control</strong> once they see the request submitted even when they think they haven't provided enough information from their end. Here's what I changed:</p>
+
+                <img class="img-responsive full-img" src="../../assets/google-iteration-control.png" alt="google-feedback-quote"> <br><br>
+
+                <h5 class="google-h5">Placement of Tips</h5>
+
+                <p>Initially, for simple problems like slow-draining toilets, I provided the users tips for quickly solving it themselves on YouTube after they submit the request. If they worked it out themselves, they can cancel the request. <br><br>
+
+                However, <span class="highlight highlight-google">all users commented that such tips should be provided <strong>before</strong> they submit requests</span>. Otherwise, if they get it fixed and a request is already in place, they'll have to cancel it again, causing more inconvenience. Therefore, I moved the tips earlier in the process:</p>
+
+                <img class="img-responsive full-img" src="../../assets/google-iteration-tips.png" alt="google-feedback-quote"> <br><br>
+
+                <h5 class="google-h5">Navigation Structure</h5>
+
+                <p><span class="highlight highlight-google">My initial design had three bottom navigation tabs, because I wanted users to see what they can do in the app clearly.</span><br><br>
+
+                However, I realized through observation & my conversations with users that <span class="highlight highlight-google">most of them won't go into the "Requests" tab often, if at all.</span> There are really few use cases in which users want to see a complete history of their requests, and they can already see the status of ongoing requests in the "Home" tab. The information in the "Requests" tab is necessary, but shouldn't take up that much visual weight. Therefore, I made the following changes:
+                 </p>
+
+               </div>
+             </section>
+           </div>
+           <img class="img-responsive large-img" src="../../assets/google-iteration-nav.png" alt="competitive products"><br><br><br>
+           <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+             <section class="group">
+
+              <div id="final-design" class="subgroup">
+                <h4>Final Design</h4>
+
+                <p>To practice my storytelling skills and help you better understand how my design addresses user's problems, <span class="highlight highlight-google">I'd love to present my final design through the following user scenarios.</span></p>
+
+                <h5 class="google-h5">Alicia's Clogged Toilet</h5>
+                <p>Using the app, Alicia is able to quickly submit requests for problems she encounters frequently. For simple problems, she can get tips from YouTube and Google, and learn to solve them herself.</p>
+
+                <div class="row feature-row">
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        01.
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Choosing a Frequent Problem
+                      </h6>
+
+                      <p class="video-feature-content">Alicia's toilet is clogged again! She opens the app and "My toilet won't drain" shows up as a frequent problem.</p>
+
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features-google">
+                        <source src="../../assets/google-video-toilet-1.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+
+                <div class="row feature-row">
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        02.
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Solving Simple Problems with Tips
+                      </h6>
+
+                      <p class="video-feature-content">Alicia watches the YouTube video recommended by the chatbot, and decides to buy a plunger. She ends up solving the problem herself!!</p>
+
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features-google">
+                        <source src="../../assets/google-video-toilet-2.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+                <h5 class="google-h5">Robert Starts Reporting Public Issues!</h5>
+                <p>As busy as Robert is, he is motivated now to report public issues because first, the process is extremely simple. Once he starts typing, the chatbot will recommend locations and problems based on the device inventory and user input history. Second, he gets points for reporting public issues, and he's so close to redeeming a $50 gift card from Starbucks, where he often meets other people. </p>
+
+                <div class="row feature-row">
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        01.
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Smooth Input with Autocomplete
+                      </h6>
+
+                      <p class="video-feature-content">Robert sees that the printer in the club room is out of ink and decides to report it. As soon as he starts describing the problem, the chatbot starts providing suggestions so that he doesn't have to type everything.</p>
+
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features-google">
+                        <source src="../../assets/google-video-printer-1-combined.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+                <div class="row feature-row">
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        02.
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Detailed Information by Request
+                      </h6>
+
+                      <p class="video-feature-content">The chatbot realizes that the information Robert provided was not enough to inform the maintenance staff, so it asks a follow up question before generating the request.</p>
+
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features-google">
+                        <source src="../../assets/google-video-printer-2.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+                <div class="row feature-row">
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        03.
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Contribute, and Get Acknowledged and Rewarded
+                      </h6>
+
+                      <p class="video-feature-content">Robert submits the public maintenance request. He is thanked for his contribution. He also gets 20 points for this request, so right now he's only 180 points away from his $50 gift card!</p>
+
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features-google">
+                        <source src="../../assets/google-video-printer-3.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+                <h5 class="google-h5">Alicia Can Better Manage Her Requests</h5>
+                <p>One of the biggest pain points for Alicia was that she didn't know anything about the progress of her requests, or when the maintenance staff would come. Not anymore. Now, she can even schedule a time, contact maintenance staff, and be assured of their professionalism through ratings.</p>
+
+                <div class="row feature-row">
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        01.
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Scheduling a Time with Maintenance
+                      </h6>
+
+                      <p class="video-feature-content">Alicia has an interview Tuesday evening, so she hopes to get her smelling bathtub fixed before that. She opens her ongoing request and schedules a time with Asa, the maintenance staff assigned to her.</p>
+
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features-google">
+                        <source src="../../assets/google-video-status-1.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+                <div class="row feature-row">
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        02.
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Tracking & Updating the Request
+                      </h6>
+
+                      <p class="video-feature-content">In addition to having a clear timeline of what will happen, Alicia can also easily edit her past request details before maintenance comes, and decide the best way to be informed and stay in touch with maintenance, including following up with them afterwards.</p>
+
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features-google">
+                        <source src="../../assets/google-video-status-2.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+                <h5 class="google-h5">Robert Can Quickly Follow Up on His Requests using Google Home</h5>
+                <p>Robert is always short on time and doesn't always want to use his phone or computer to track maintenance tasks. Fortunately, he is able to use his Google Home's Action to help him quickly follow up on requests that are not completely fulfilled.</p>
+
+                <div class="row feature-row">
+
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title-google video-feature-title-photos">
+                        01.
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        “Let Google Do It”
+                      </h6>
+
+                      <p class="video-feature-content">Robert goes home and finds that of the two lights he reported, one has been fixed, and the other hasn't. He quickly follows up with maintenance by talking to Google Home while preparing his lunch for tomorrow.</p>
+
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <img class="img-responsive full-img" src="../../assets/google-scenario-home.png" alt="google-feedback-quote"> <br><br>
+                    </div>
+                </div>
+
+                <p class="p-center-wrapper"><a href="https://drive.google.com/open?id=1P2XlDoYOFmoTd4c5pC4VfdbP4RSNfZ8l" target="_blank"><button class="btn black-button" name="button">View Hi-Fi Design</button></a> </p>
+
+
+
+
+              </div>
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="future-steps" class="group">
+              <h3>Future Steps</h3>
+              <hr>
+              <div class="subgroup">
+                  <p>I completed the exercise within 7 days within the scope I initially defined. However, if I had more time and resources to do the project, I would like to further explore a couple of things:</p>
+              </div>
+
+              <div class="subgroup" id="other-stakeholders">
+                  <h4>Considering Other Stakeholders</h4>
+                  <p>As I stated in my assumptions, since I had the most access to residents, <span class="highlight highlight-google">I designed the solution with mostly their needs in mind.</span> Though I considered other stakeholders like maintenance staff and the company that owns the apartment, there are still more questions to consider before deciding on the final design of the system.</p>
+
+                  <h5 class="google-h5">How Would Maintenance Staff React to the App?</h5>
+
+                  <p>To help users feel assured of the expertise of the maintenance staff members, I showed them photos and ratings of staff members (the rating flow is not yet designed due to time limitations). I also provided ways to contact and schedule appointments with maintenance staff. I even thought about doing a tipping system for users to tip staff members. <span class="highlight highlight-google">All these features are designed to help users feel that a real person is handling their request, and that the person is highly skilled in it.</span><br><br>
+
+                  However, <span class="highlight highlight-google">I need to make sure that maintenance staff members are OK with sharing such information.</span> I also need to consider <span class="highlight highlight-google">how they work currently, what their existing system looks like, and how the proposed design will change their current workflow</span>. Will there be retraining involved? Will it make their jobs easier or harder? All these factors need to be considered to evaluate my solution.
+                  </p>
+
+                  <h5 class="google-h5">How Would the Apartment React to the Rewards Mechanism?</h5>
+
+                  <p>My analysis told me that the apartment would be willing to provide incentives like gift cards to encourage its residents to report public issues. However, <span class="highlight highlight-google">I need to further confirm with the apartment's representatives that they would be willing to do so.</span> In addition, <span class="highlight highlight-google">the exact rewarding mechanism</span>, including how many points to reward for what kind of issues, and how points would convert into dollars and gifts, <span class="highlight highlight-google">need to be further defined with all stakeholders involved.</span></p>
+              </div>
+
+              <div class="subgroup" id="reward-concerns">
+                <h4>Concerns about the Reward System</h4>
+                <p>One concern I heard about the rewarding system is that <span class="highlight highlight-google">some people might report random issues in order to get points</span>. This will negatively influence the apartment and the work of the maintenance staff. In other hypothetical cases, people might even intentionally break things and report them later. These events might be highly unlikely, but they are valid concerns. During my design process, I only conceptually thought about designing a mechanism to verify that the request is valid and to ensure fairness and property behavior. <span class="highlight highlight-google">Further work or even experiments are needed to verify if the reward system works as expected.</span></p>
+              </div>
+
+              <div class="subgroup" id="edge-cases">
+                <h4>Considering All Cases</h4>
+                <p class="small-margin-bottom">The flows I illustrated in the case study were the main flows that best demonstrate my design ideas. There are other less crutial flows and edge cases that are nevertheless necessary to consider. For example:</p>
+
+                <ul>
+                  <li>I hope to enable users to <span class="highlight highlight-google">take photos of facilities and make annotations on them</span>. How would that happen?</li>
+                  <li>What if the user wants to submit a public issue, while the same issue had already been submitted? <span class="highlight highlight-google">How would the chatbot check for duplicates</span> and remind the user of that? How would the reward system work in this case?</li>
+                  <li>What if all the available slots from the maintenance staff assigned to me does not work for me? Can I change who I am assigned to?</li>
+                  <li>What if the repair has extra cost? What if the maintenance staff couldn't solve the problem on first visit, and <span class="highlight highlight-google">have to schedule another visit afterwards</span>? What if a contractor needs to be hired?</li>
+                </ul>
+
+                <p>These are just some of the cases I thought about as I examined my design and showed the design to users. I'll need to further consider them if I had more time.</p>
+              </div>
+
+              <div class="subgroup" id="generalize">
+                <h4>Generalizing to Other Communities</h4>
+                <p>I based my design on only one apartment community in Atlanta. If I had more time, I'd like to consider different communities with different kinds of residents. <span class="highlight highlight-google">Since they might have different facilities, different plans, and different demographics, it'd be interesting to see if I could design <strong>a solution that can scale</strong>.</span></p>
+              </div>
+
+              <div class="subgroup" id="crowdsource">
+                <h4>Crowdsourced Help</h4>
+                <p>One of my design goals is to provide alternative ways for users to solve their problems if maintenance staff members are not available. <span class="highlight highlight-google">I already provided tips for them from YouTube and Google, but I hope to experiment with more solutions.</span> For example, w<span class="highlight highlight-google">hat if we can crowdsource the help, and let our neighbors help us?</span> That would be helpful if we need simple help, like borrowing a plunger, or fixing a buzzing smoke detector that we can't reach. <span class="highlight highlight-google">People's reactions to this idea might depend on their relationships with their neighbors, and the nature of the community.</span> There might also be security issues involved. I'd love to further explore alternative options if I had more time.</p>
+              </div>
+
+              <div class="subgroup" id="future">
+                <h4>Envisioning the Future</h4>
+                <p>Though I always think about the implementation feasibility of my design, <span class="highlight highlight-google">I also love to think about what would happen if we were in the future.</span> Perhaps a sensor could be attached to each facility, so that when it fails, it would automatically report itself. In that way, would there still be a need for residents to do the report?<br><br>
+
+                This scenario would be unlikely, but it is possible now for us to detect simple problems like "the printer's out of paper", or "the clubroom is out of coffee". Once detected, it's also possible to send such information to the right person for the issue to be immediately resolved. <span class="highlight highlight-google">If I had more time, I'd love to think about such scenrios, and analyze why such solutions have not been implemented already (maybe due to lack of demand, cost, no business case, or other factors).</span>
+                 </p>
+              </div>
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section class="group">
+              <div class="subgroup">
+                <p>Yayyyyyyyyy you made it! Thank you all for reading through this case study! <span class="highlight highlight-google">I had a lot of fun with the project</span>, which enabled me to touch upon different topics like <span class="highlight highlight-google">AI, chatbot, smart home, etc</span>. I also really enjoyed the process, including bringing my prototypes to users and getting a variety of responses from them, <span class="highlight highlight-google">exploring principles in material design & examining how it has evolved</span>, and crafting animations for the chatbot & the reward mechanism.  Hope you enjoyed learning about my design and thought process.:)</p>
+              </div>
+            </section>
+        </div>
+      </div>
+    </div>
+
+    <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+    <div class="container-fluid">
+      <div class="row footer-row">
+        <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a class="hvr-underline-from-left" href="../home.html#my-work" >All</a> /
+            <a class="hvr-underline-from-left" href="./eatxplore.html">Eatxplore</a> /
+            <a class="hvr-underline-from-left" href="./photos.html">Google Photos Redesign</a> /
+            <a class="hvr-underline-from-left" href="./mirror-mirror.html">Mirror Mirror</a> /
+            <a class="hvr-underline-from-left" href="./THD.html">My Home Depot Internship</a> /
+            <a class="hvr-underline-from-left" href="./cook-fresh.html" >Cook Fresh</a> /
+            <a class="hvr-underline-from-left" href="./up-up.html" >Up & Up</a> /
+            <a class="hvr-underline-from-left" href="./rei-backpack.html" >REI Backpack Finder</a> /
+            <a class="hvr-underline-from-left" href="./thriller.html" >The Resurrected</a>
+          </p>
+          <br>
+          <br>
+          <p class="footer-text">Designed and Handcoded with ♥ and ♫</p>
+        </div>
+        <div class="footer-icons col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a href="https://dribbble.com/yanfengjin" target="_blank"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/yanfeng-jin-tony-80533455/" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@yanfengjin" target="_blank"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+            <a href="mailto:yjin@gatech.edu" target="_blank"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a>
+          </p>
+          <br>
+          <p class="footer-text-small">Tony Yanfeng Jin © 2017-2018 All Rights Reserved</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+</html>

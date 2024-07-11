@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111016994-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111016994-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <title>The Resurrected | Yanfeng Jin (Tony)</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="shortcut icon" type="image/x-icon" href="../../assets/icon-tab.ico">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel = "stylesheet" type = "text/css" href = "../../css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../../css/fonts.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet"> -->
+    <link href="../../css/zoom.css" rel="stylesheet">
+    <script src="../../js/transition.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="https://use.fontawesome.com/a891bb0a11.js"></script>
+    <script src="../../js/script.js" charset="utf-8"></script>
+
+
+
+    <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1409449789");
+    </script>
+
+  </head>
+
+  <body>
+    <div class="spinner-wrapper">
+      <div class="p-center-wrapper">
+        <div class="la-line-scale la-dark">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <h4 id="preloader-title"></h4>
+            <h5 id="preloader-content"></h5>
+        </div>
+
+      </div>
+
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-nav">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../home.html">Tony Jin</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="collapsible-nav">
+        <ul class="nav navbar-nav">
+          <li><a class="selected hvr-underline-from-left" href="../home.html#my-work">Projects</a></li>
+          <li><a class="hvr-underline-from-left" href="../../assets/Yanfeng-Jin-Resume-v8.3.pdf" target="_blank">Resume</a></li>
+          <li><a class="hvr-underline-from-left" href="https://medium.com/@yanfengjin" target="_blank">Writings</a></li>
+          <li><a class="hvr-underline-from-left" href="../about-me.html">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 50px">
+        <nav class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <div class="bs-docs-sidebar">
+            <ul class="nav nav-stacked"id="sidebar">
+
+              <li>
+                <a href="#overview">Overview</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#problem">Design Question</a></li>
+                  <li><a href="#solution">Solution</a></li>
+                  <!-- <li><a href="#methods">Our Approach</a></li>  -->
+                  <li><a href="#my-role">My Contribution</a></li>
+                  <li><a href="#design-outcome">Design Outcome</a></li>
+                  <!-- <li><a href="#lessons-learned">What I Learned</a></li> -->
+                </ul>
+              </li>
+
+
+              <!-- <li>
+                <a href="#problem-discovery">Problem Discovery</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#user-needs">User Needs</a></li>
+                  <li><a href="#why-voice">Why Voice?</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#design">Design</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#thinking-boldly">Thinking Boldly</a></li>
+                  <li><a href="#happy-path">The Happy Path</a></li>
+                  <li><a href="#synonyms-combo-breakers">Synonyms & Combo-Breakers</a></li>
+                  <li><a href="#refining-interactions">Refining Interactions</a></li>
+                  <li><a href="#future-steps">Future Steps</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#reflections">Reflections</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#challenges">Challenges for Voice Interface Design</a></li>
+                  <li><a href="#principles">Unchanging Design Principles</a></li>
+                  <li><a href="#importance-user-testing">The Importance of User Testing</a></li>
+                </ul>
+              </li> -->
+
+            </ul>
+          </div>
+        </nav>
+
+        <div class="bg bg-thriller" data-aos="fade-up" data-aos-duration="600" ></div>
+        <div class="jumbotron">
+          <div class="jumbotron-text">
+            <!-- <h1>Eatxplore</h1>
+            <p class="lead">Breaking the Cultural Barriers of Food.</p> -->
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+
+          <!-- <div data-aos="fade-up" data-aos-duration="600">
+            <h1 class="article-title">Cook Fresh</h1>
+
+            <p class="article-subtitle">Smart Cooking Assistant that Reduces Food Waste</p>
+            <hr>
+
+            <img src="../../assets/CookFresh-perspective.png" alt="Cook Fresh" class="img-responsive col-centered full-img">
+          </div> -->
+
+
+          <section id="overview" class="group first-section" data-aos="fade-up" data-aos-duration="600">
+              <h6>           </h6><br>
+
+          <!-- </section>
+        </div>
+
+        <img class="img-responsive full-img"src="../../assets/walker-problem-quote3.png" alt="problem">
+        <br><br><br>
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+          <section class="group"> -->
+
+              <h3>Overview</h3>
+              <hr>
+
+
+
+              <div class="row">
+
+                <div class="subgroup-left-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+                    <h4 id="problem">Design Question</h4>
+                    <p>How can we design a narrative in Virtual Reality that can <span class="highlight highlight-thriller">motivate interactors to identify themselves as part of the virtual world and engage with virtual characters?</span></p>
+
+                    <h4 id="solution">Solution</h4>
+                    <p class="small-margin-bottom">A Thriller-themed VR experience in which the interactor resurrects from a coffin with other zombies, realizes his/her identity, follows the invitation and dancing tutorial provided by Michael Jackson, and joins a group zombie dance in the end.</p>
+                </div>
+
+                <div class="subgroup-right-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <h4>My Role</h4>
+                  <p>VR Experience Designer, Unity Developer</p>
+                  <h4>Timeline</h4>
+                  <p>Sept. 2018 - Now</p>
+                  <h4>Team Members</h4>
+                  <p>Tony Jin, Shengxi Wu, Yannu Li, Huan Deng</p>
+                  <h4></h4>
+                  <h4>Tools</h4>
+                  <p>Unity 3D</p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+
+              <!-- <div id="methods" class="subgroup">
+                  <h4>Our Approach</h4>
+                  <img class="img-responsive full-img" src="../../assets/walker-design-process.png" alt="">
+              </div> -->
+
+              <div id="my-role" class="subgroup">
+                  <h4>My Contribution</h4>
+                  <p class="small-margin-bottom">I came up with the initial idea with Shengxi, and pitched it to other group members. During the initial planning phase, <span class="highlight highlight-thriller">I encouraged my team to brainstorm ideas for different "touchpoints" in the experience, and led those brainstorming sessions.</span> I prototyped all the interactions in Unity, evaluated the experience through 3 rounds of testing, and iterated on the design with my teammates.
+                  </p>
+              </div>
+
+              <div id="design-outcome" class="subgroup">
+                  <h4>Design Outcome</h4>
+                  <p>The project is still in progress--we only made the prototype with enough fidelity for us to test our ideas and see people's reactions; we still need to iterate on the narrative & interaction design. Here's a medium-fidelity prototype that we recently tested with the public:</p>
+
+                  <div class="video-wrapper">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/6_3FJzisO4U" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                  </div> <br><br><br>
+
+                  <p>This project is still in progress. Please check back in a week or two for further updates.</p>
+
+                  <!-- <p class="p-center-wrapper"><a href="#reflections" class="btn black-button" type="button" name="button">See What I Learned</button></a></p><br><br> -->
+
+
+                  <!-- <p>Our prototype in Sayspring can be viewed <a href="https://app.sayspring.com/projects/3a0f7c0f-627a-48e1-b49f-1aebe8a2269a/invitation/new">here</a>. However, you might need a Sayspring account in order to access it.</p> -->
+              </div>
+
+              <!-- <div class="subgroup">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row">
+                  <p class="p-center-wrapper"><a href="#prototype-small" class="btn black-button" type="button" name="button">Jump to Prototype</button></a></p><br><br>
+                </div>
+              </div> -->
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <!-- <section id="problem-discovery" class="group" data-aos="fade-up" data-aos-duration="600">
+            <h3>Problem Discovery</h3>
+            <hr>
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <section id="design" class="group" data-aos="fade-up" data-aos-duration="600">
+            <h3>Design</h3>
+            <hr>
+            <div id="thinking-boldly" class="subgroup">
+            </div>
+          </section> -->
+
+
+        </div>
+      </div>
+    </div>
+
+    <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+    <div class="container-fluid">
+      <div class="row footer-row">
+        <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a class="hvr-underline-from-left" href="../home.html#my-work" >All</a> /
+            <a class="hvr-underline-from-left" href="./eatxplore.html">Eatxplore</a> /
+            <a class="hvr-underline-from-left" href="./photos.html">Google Photos Redesign</a> /
+            <a class="hvr-underline-from-left" href="./mirror-mirror.html">Mirror Mirror</a> /
+            <a class="hvr-underline-from-left" href="./THD.html">My Home Depot Internship</a> /
+            <a class="hvr-underline-from-left" href="./cook-fresh.html" >Cook Fresh</a> /
+            <a class="hvr-underline-from-left" href="./up-up.html" >Up & Up</a> /
+            <a class="hvr-underline-from-left" href="./rei-backpack.html" >REI Backpack Finder</a> /
+            <a class="selected-footer" href="./thriller.html" >The Resurrected</a>
+          </p>
+          <br>
+          <br>
+          <p class="footer-text">Designed and Handcoded with ♥ and ♫</p>
+        </div>
+        <div class="footer-icons col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a href="https://dribbble.com/yanfengjin" target="_blank"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/yanfeng-jin-tony-80533455/" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@yanfengjin" target="_blank"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+            <a href="mailto:yjin@gatech.edu" target="_blank"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a>
+          </p>
+          <br>
+          <p class="footer-text-small">Tony Yanfeng Jin © 2017-2018 All Rights Reserved</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <title>Toxicity Mitigation</title>
+
+
+
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="shortcut icon" type="image/x-icon" href="../../assets/icon-tab.ico">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel = "stylesheet" type = "text/css" href = "../../css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../../css/fonts.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../../css/zoom.css" rel="stylesheet">
+    <script src="../../js/transition.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://use.fontawesome.com/a891bb0a11.js"></script>
+    <script src="../../js/script.js" charset="utf-8"></script>
+
+
+
+    <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1409449789");
+    </script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-nav">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../home.html">Tony Jin</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="collapsible-nav">
+        <ul class="nav navbar-nav">
+          <li><a class="selected hvr-underline-from-left" href="../home.html#my-work">Works</a></li>
+          <li><a class="hvr-underline-from-left" href="../../assets/resume/Md_Farhan_Ahmed_Resume (3).pdf" target="_blank">Resume</a></li>
+          <li><a class="hvr-underline-from-left" href="../about-me.html">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 50px">
+        <nav class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <div class="bs-docs-sidebar">
+            <ul class="nav nav-stacked"id="sidebar">
+
+              <li>
+                <a href="#overview">Overview</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#problem">Problem</a></li>
+                  <li><a href="#solution">Solution</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#research">Research</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#why-photos">Why Redesigning Google Photos?</a></li>
+                  <li><a href="#domain-research">Domain Research</a></li>
+                  <li><a href="#user-needs">Defining User Needs</a></li>
+                  <li><a href="#design-goals">Design Goals</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#design">Design</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#browsing">Facilitating the Browsing of Past Photos</a></li>
+                  <li><a href="#curating">Helping Users Curate Their Photo Library</a></li>
+                  <li><a href="#hi-fi">High Fidelity Design</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#future-steps">Future Steps</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#edge-cases">Technical Details for Grouping</a></li>
+                  <li><a href="#user-testing">Evaluating the Design with Users</a></li>
+                  <li><a href="#existing-features">Integrating with Existing Features</a></li>
+                  <li><a href="#web-ui">Extending the UI to Other Platforms</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#what-i-learned">What I Learned</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#redesign">Considerations for Redesign</a></li>
+                  <li><a href="#ideas">Capturing Creative Ideas</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+
+
+        <div class="bg bg-photos" data-aos="fade-up" data-aos-duration="600"></div>
+        <div class="jumbotron" data-aos="fade-up" data-aos-duration="600">
+          <div class="jumbotron-text">
+          </div>
+        </div>
+
+
+
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content first-section">
+
+
+          <section id="overview" class="group" data-aos-duration="600">
+            <h3>Overview</h3>
+            <hr>
+            <div id="problem" class="subgroup">
+              <h4>Problem</h4>
+              <p class="small-margin-bottom">Casual/semi-professional photographers usually take lots of similar photos of the same thing/person, and <span class="highlight highlight-photos">have a hard time comparing them afterwards to pick the best ones.</span> Those highly similar photos also <span class="highlight highlight-photos">clutter their photo libraries</span>, making it hard for them to later find what they want.</p><br>
+              <img class="img-responsive full-img" src="../../assets/photos-problem.png" alt="the problem"> <br><br>
+            </div>
+
+            <div class="row">
+              <div  class="subgroup-left-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                  <h4 id="solution">Solution</h4>
+                  <p>I designed <span class="highlight highlight-photos">Photo Groups</span>, a new feature in Google Photos that <span class="highlight highlight-photos">better leverages its Machine Learning capabilities to identify similar photos, group them together, suggest the best ones, and facilitate photo comparison.</span> With Photo Groups, users can clean up the clutter in their photo library, and more quickly compare the photos they take, select the best ones for further actions, and delete the unwanted ones.</p>
+              </div>
+
+              <div class="subgroup-right-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h4>Timeline</h4>
+                <p>A Week</p>
+                <h4>Project Info</h4>
+                <p>Individual Design Exercise</p>
+                <h4>Tools</h4>
+                <p>Sketch, InVision Studio, Principle</p>
+
+                <br>
+                <br>
+              </div>
+            </div>
+
+            <div class="subgroup">
+              <div class="row feature-row">
+                  <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                    <video autoplay muted loop class="video-features">
+                      <source src="../../assets/photos-browsing-v2.mp4"/>
+                    </video>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                    <h5 class="video-feature-title video-feature-title-photos">
+                      Browsing without Clutter
+                    </h5>
+
+                    <h6 class="video-feature-subtitle">
+                      With Photo Groups, find your best memories more quickly.
+                    </h6>
+
+                    <p class="video-feature-content">Using Machine Learning algorithms, the redesigned Google Photos automatically groups similar photos taken around the same time, and only shows the best shot in your camera roll. Browse through the best of your memories, and dive deeper to see all the images in a group only if you are interested.</p>
+                  </div>
+                </div>
+
+
+                <div class="row feature-row">
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title video-feature-title-photos">
+                        Instantly Find the Best in Group
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        The best photo is already picked for you. Compare other photos against it without scrolling around.
+                      </h6>
+
+                      <p class="video-feature-content">We suggest the best shot for you to view or share. Not satisfied with the recommended one? The newly designed "Comparison Mode" helps you instantly see how each photo you took differs from our suggested one. Make fast decisions to mark or delete, and delete all the unwanted ones with one click.</p>
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features">
+                        <source src="../../assets/photos-comparison.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+
+                <div class="row feature-row">
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features">
+                        <source src="../../assets/photos-edit-group.mp4"/>
+                      </video>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title video-feature-title-photos">
+                        You are in Control
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Easily customize your Photo Groups the way you want.
+                      </h6>
+
+                      <p class="video-feature-content">We make sure that the algorithms do most of the work for you, but we know that sometimes, your preferences might be different. In case you don't agree with our grouping or recommendations, simply edit the photo group or change the key photo of the group to ones you like.</p>
+                    </div>
+                </div>
+                <p class="p-center-wrapper"><a href="#hi-fi" target="_blank"><button class="btn black-button" name="button">Jump to Final Design</button></a> </p>
+            </div>
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+
+          <section id="research" class="group" >
+            <div data-aos="fade-up" data-aos-duration="600">
+              <h3>Research</h3>
+              <hr>
+              <div id="why-photos" class="subgroup">
+                <h4>Why Redesigning Google Photos?</h4>
+                  <p>I love Google Photos. As a user, I think it's my favorite app for organizing photos, looking them up, quickly sharing them with friends, and getting fun animations & collages. As a designer, I love how it leverages the power of machine learning to explore more intuitive ways for users to manage their photos, such as using natural language to search for photos instead of looking through a lengthy, messy timeline.<br><br>
+
+                  <span class="highlight highlight-photos">However, I believe that Google's machine learning technologies can be further pushed to make the photo management experience easier.</span> A problem that my friends and I usually encounter is that when taking photos, we'd like to take a lot of them, and then select the best ones afterwards. The selection process can be time consuming and frustrating, and if we leave all those photos there, they'll soon clutter the photo library, making it hard for us to find what we want. This gave me the initial idea: <span class="highlight highlight-photos">what if we can rethink the way photos are presented in Google Photos, and make the selection process much easier?</span> <br><br>
+
+                  Of course, if I were designing the real product, I would also refer back to the product's own target audience and the company's roadmap, to think about whether the feature is crucial for both its users and the business.
+                  </p>
+              </div>
+
+              <div id="domain-research" class="subgroup">
+                <h4>Domain Research</h4>
+                <p class="small-margin-bottom">I first looked into the market, trying to find inspirations and gaps among existing products:</p>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive large-img" src="../../assets/photos-competitive-products.png" alt="competitive products"><br><br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+
+              <div class="subgroup">
+                <p>Only Gemini helps users manage similar photos, but users will need to go into the app to manually clean up their photo library. <span class="highlight highlight-photos"><strong>None of the existing products facilitates comparison between photos, which is actually the biggest problem I later identified in my research.</strong></span> Can we make the clean up process more care-free, and help users better compare similar photos they took?</p>
+              </div>
+
+              <div id="user-needs" class="subgroup">
+                  <h4>Defining User Needs</h4>
+                  <p>As a designer, I know that I shouldn't design for myself. <span class="highlight highlight-photos">I cannot assume that the problem is widespread enough that it's worth the effort to design something to solve it.</span> To quickly understand whether this is a problem worth solving, I decided to 1) look into photography forums on Reddit, and 2) conduct quick, semi-structured interviews with people around me.</p>
+                  <p></p>
+
+                  <h5 class="photos-h5">Online Forums</h5>
+                  <p class="small-margin-bottom">Because of the <span class="highlight highlight-photos">time constraint</span>, I decided that online forums would be the quickest way for me to understand the problem. Therefore, <span class="highlight highlight-photos">I went to photograph-related sub-reddits to ask whether having multiple similar photos cluttering the photo library is a problem that others encounter.</span> <br><br>
+
+                  What I found was surprising. People's responses generally fell into the following two categories: <br><br>
+
+                  <strong>1. Good photographers shouldn't take too many photos in the first place; then it will not be a problem.</strong>
+                  </p>
+                  <img class="img-responsive full-img" src="../../assets/photos-forum-quote-1.png" alt="" style="box-shadow: 2px 4px 24px rgba(0,0,0,0.10);"> <br><br>
+                  <p class="small-margin-bottom">
+                  <strong>2. I am willing to/I have to spend the time and efforts to pick from all the photos I took and edit them.</strong>
+                  </p>
+                  <img class="img-responsive full-img" src="../../assets/photos-forum-quote-2.png" alt="" style="box-shadow: 2px 4px 24px rgba(0,0,0,0.10);"> <br><br>
+
+                  <p><span class="highlight highlight-photos">Why is this?</span> <br><br>
+
+                    As I looked more into their answers, I realized that <span class="highlight highlight-photos"><strong>the reddit users who responded tend to be more experienced photographers!</strong></span> Unlike those who are just casually taking snapshots of life, these semi-professional or professional photographers either take fewer, high-quality shots, or spend a long time manually refining their photographs using tools like Lightroom. <span class="highlight highlight-photos">In other words, they either don't have lots of similar photos in their library, or do have a lot, but consider it necessary to go over them one by one to make sure they select the best photos and post-process them.</span> <br><br>
+
+                    Therefore, it seems like more professional photographers fall out of my target audience. What about more casual photographers, who just use cameras to capture snapshots of life?
+                  </p>
+
+                  <h5 class="photos-h5">Interviews & Personas</h5>
+                  <p class="small-margin-bottom">With that question in mind, I drafted a couple of questions and started casually asking people around me about their habits of taking photos, and whether they encounter any difficulties organizing them as of now. <span class="highlight highlight-photos">I had the hypothesis that people who are more casual and less deliberate when taking photos will have frustrations cleaning their photo library and getting rid of similar photos.</span> <br><br>
+
+                  My findings validated the hypothesis: when people are taking photos casually, they tend to encounter frustrations managing similar photos and picking the best ones.</p>
+
+                  <p class="p-center-wrapper"><button data-toggle="collapse" data-target="#interview-details" class="btn black-button" name="button">See Detailed Results</button></p>
+
+                  <div class="collapse" id="interview-details">
+                    <p>As I expected, all the casual/semi-professional photographers agreed that it is normal for them to take a lot of similar photos, and that it is a pain for them to organize them afterwards because <span class="highlight highlight-photos">they 1) either want to select the best ones to share (on social media, with friends), or 2) need to clean up those photos to save storage space or remove clutter.</span><br><br>
+
+                    For more professional photographers, it depends on the person and the context. Some professionals avoid taking similar photos in the first place and have the ability to capture amazing shots on one click; others take lots of photos, but use more professional tools other than Google Photos to post-process photos.<br><br>
+
+                    <span class="highlight highlight-photos">However, professional photographers, especially those who do take lots of similar photos, are not always in their "photoshoot mode."</span> When they do take photos casually, they'd still use their phones to compare and delete unwanted ones, and would run into similar problems as casual photographers do.
+                    </p>
+                  </div>
+
+
+
+
+                  <p class="small-margin-bottom">I then summarized the research and created the following personas to guide my design process. I also created an anti-persona to make sure that I remember who I am not designing for.</p>
+
+                </div>
+              </section>
+            </div>
+            <img class="img-responsive large-img" src="../../assets/photos-personas.png" alt="Mind Map for Ideation"><br><br><br>
+            <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+              <section class="group">
+                <div class="subgroup">
+                  <!-- <img class="img-responsive full-img" src="../../assets/photos-personas.png" alt="" style="box-shadow: 2px 4px 24px rgba(0,0,0,0.10);"> <br><br> -->
+
+
+              </div>
+
+
+
+
+
+              <div id="design-goals" class="subgroup">
+                <h4>Design Goals</h4>
+                <p>Based on the user needs and the gaps in existing products, I summarized the higher level goals I hope to achieve with the redesign.</p>
+                <img class="img-responsive full-img" src="../../assets/photos-design-goals.png" alt="design goals"> <br><br>
+
+              </div>
+
+
+
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="design" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>Design</h3>
+              <hr>
+              <div class="subgroup">
+                <p class="small-margin-bottom">Having understood the design goals, I started brainstorming and developing ideas that can help me achieve these goals.</p>
+              </div>
+
+
+              <div id="browsing" class="subgroup">
+                <h4>Facilitating the Browsing of Past Photos</h4>
+                <p>Right now, users see all of their photos laid out in the "Photos" tab, where similar photos take a lot of space and prevent them from finding the ones they need. <span class="highlight highlight-photos">From my user research, I learned that users don't necessarily need all those photos there, especially the similar ones. They just want to see the key photos that remind them of what they've done and where they've been.</span> Only if they are interested do they want to see all the different photos related to that particular moment.</p>
+
+                <h5 class="photos-h5">Where Should the Redesign Happen?</h5>
+                <p>My first instinct was to redesign the "Photos" tab, but before diving into a redesign, I asked myself: <span class="highlight highlight-photos">can this problem be approached elsewhere?</span> <br><br>
+
+                Google Photos enables users to search for particular photos using natural language (e.g. Paris Summer, Dogs, Sunset, etc.). It also automatically creates albums for photos taken around the same time and place, and recommends them to users. Should I focus on these functions instead to better help users browse through their memories?<br><br>
+
+                <img class="img-responsive full-img" src="../../assets/photos-where-redesign.png" alt="Where redesign"> <br><br>
+
+                <span class="highlight highlight-photos">I referred back to what I learned from the user interviews.</span> Most users I talked with spent most of their time browsing through photos in their "Photos" tab. Some do use "search", but only for searching specific photos. As for the automatically generated albums, users mentioned that those albums don't contain all the photos they took. <span class="highlight highlight-photos">Though the intention of those albums was to automatically include only the best photos for users, users still wanted to know that all the photos they took are there, and would prefer looking into the camera roll in the "Photos" tab.</span><br><br>
+
+                Therefore, I decided that the "Photos" tab was where the redesign should happen.</p>
+
+                <h5 class="photos-h5">Design Alternatives: Grouping and Expanding</h5>
+                <p class="small-margin-bottom">One way to help users quickly clean the clutter in their camera roll is to <span class="highlight highlight-photos">use Machine Learning algorithms to group similar photos and only display the best one on the main grid view.</span> Users can look through the photos, click on a group that interests them, and see all the other photos in the group expanded, so that they can look into them in details.</p>
+
+                <p class="p-center-wrapper"><button data-toggle="collapse" data-target="#technical-feasibility" class="btn black-button" name="button">Is this Technically Feasible?</button></p>
+
+                <div class="collapse" id="technical-feasibility">
+                  <p>Because of my technical background, I would always consider the feasibility of my design even when I don't have access to the project's engineers.<br><br>
+
+                  <span class="highlight highlight-photos">Two important questions about this design idea are 1) how to define "similar photos" and group them, and 2) how to define "the best photo" among a group of similar photos.</span><br><br>
+
+                  For the first question, <span class="highlight highlight-photos">Google Photos is already able to identify similar photos.</span> Its Assistant feature automatically generates collages and animations from similar photos. For the second one, Google Photos is now able to automatically create albums and videos, and select unrepeated photos to put in them on its own. I'm not sure if those photos are "the best" ones, but they are definitely carefully picked from the existing photos. <span class="highlight highlight-photos">In addition, Google Clip does have the feature of automatically recommending a best photo from a video clip.</span> Therefore, though the concept of a best photo is still highly subjective, I believe that the technology of selecting a "best photo" from a group of photos, accroding to some standards, should be available to Google.
+                  </p>
+                </div>
+
+                <p>With this idea in mind, I quickly drew out 2 alternatives and thought about the pros and cons.
+                 </p>
+                <img class="img-responsive full-img" src="../../assets/photos-main-grid-ideation-1.png" alt="main ideation 1"> <br><br>
+
+                <p><span class="highlight highlight-photos">However, expanding a group on the grid layout means that the entire layout needs to be changed on click. It also means that users would need one more step to get to the photo they want.</span> They would still need to select between similar looking thumbnails in the photo roll.<br><br>
+
+                I then started asking myself: <span class="highlight highlight-photos">do users really need to see all those similar photos in the photo roll at all?</span><br><br>
+
+                It seemed to be the convention to have all the photos displayed in the camera roll, at least in the expanded view; but as I referred back to the user needs and my design goal, I realized that this convention could be broken. <span class="highlight highlight-photos"><strong>The primary function of the camera roll is for users to quickly browse through and find/discover what they're looking for. There is no point of seeing several visually similar thumbnails there; users only care about how they differ when they can see the detailed image.</strong></span><br><br>
+
+                Therefore, I developed the third alternative.
+                 </p>
+                 <img class="img-responsive full-img" src="../../assets/photos-main-grid-ideation-2.png" alt="main ideation 2"> <br><br>
+
+                 <p>I quickly drew out a wireframe and <span class="highlight highlight-photos">showed it to users to validate this idea.</span></p>
+
+                 <img class="img-responsive full-img" src="../../assets/photos-wireframes-browse-1.png" alt="wireframes"> <br><br>
+
+                 <h5 class="photos-h5">User Feedback: How to Identify the Most Important Moments?</h5>
+                 <p>One feedback I received was surprising: <span class="highlight highlight-photos">some users say that sometimes having all the similar photos displayed in the camera roll actually helps them identify which moments were the most important.</span> When they are quickly scrolling through the timeline, they'll stop when they see, for example, that they've taken 15 similar photos for one place they visited. That probably means that they spent a lot of time there, or that the place was special. Grouping all 15 photos into one single thumbnail loses that aspect, though it helps them clean up their photo library.<br><br>
+
+                 <span class="highlight highlight-photos">That was something I was not aware of before. Solving one problem might lead to the creation of another. Is there a better way to solve the clutter problem, while still having something to indicate the importance of a group of similar photos?</span> <br><br>
+
+                 I quickly thought about 2 alternatives:
+                 </p>
+
+                 <img class="img-responsive full-img" src="../../assets/photos-important-moment-alternatives.png" alt="alternatives"> <br><br>
+
+                 <p><span class="highlight highlight-photos">I decided that using size to denote the number of photos in a group would be a better choice because <strong>size encodes more useful information in a way that people intuitively understands: the larger the size, the bigger the number.</strong></span><br><br>
+
+                 However, this means that we'll need to slightly change the algorithm of how the photos will be displayed in the "Photos" tab. <span class="highlight highlight-photos">If I had access to developers, I would definitely consult with them about this change, and balance the value the change brings with the amount of effort we need to put into that change.</span><br><br>
+
+                 According to my own understand of Google Photos' current grid layout, I started exploring how this change will affect the layout in different situations.
+                </p>
+
+                <h5 class="photos-h5">Grouping for Different Grid Layouts</h5>
+                <p>The iOS client of Google Photos has 4 different grid layouts.</p>
+
+                <img class="img-responsive full-img" src="../../assets/photos-existing-grids.png" alt="existing grids"> <br><br>
+
+                <p>Obviously, there's no point of grouping thumbnails in the Year View, since it doesn't show all the photos to users. Therefore, I started thinking how I can group thumbnails for the other 3 views, and drew out the respective wireframes.</p>
+
+                <img class="img-responsive full-img" src="../../assets/photos-grouped-grids.png" alt="grouped grids"> <br><br>
+
+                <p>In Month View and Day View (3), since almost all photos are displayed in fixed-sized squares, I defined 3 different sizes for different numbers of photos grouped together. For Day View (2), since there are at most 2 photos per row, and the photo sizes differ depending on their aspect ratio, width and height, I only defined 2 different sizes to represent the numbers of photos in each group.<br><br>
+
+                <span class="highlight highlight-photos">As for the actual thresholds for dividing the groups (e.g. whether a group of 7 photos should be of size 1 or size 2), I will need to talk with engineers to discuss the details and experiment with real data. It might also depend on the habits of different users.</span>
+                 </p>
+
+                <h5 class="photos-h5">How Will the Grouping Change the Way Users Browse/Interact with Photos?</h5>
+
+                <p>After redesigning the grid layout in the "Photos" tab, what would users see after they click into a user group then? <span class="highlight highlight-photos">Bringing in the concept of "photo groups" means that I need to think more about 1) how users would navigate between photos in those groups, and 2) how the existing interactions with those photos might be affected.</span><br><br>
+
+                For the first question, I referred back to user needs and put myself in the shoes of a user. <span class="highlight highlight-photos">Because of my limited time, I made an educated assumption that most of the times, users would only need to see one photo within each photo group as they swipe through their photo library.</span> Only for photos that they're really interested in will they want to see all the other similar ones they've taken.<br><br>
+
+                With this assumption in mind, I started thinking about alternatives for the interaction.
+                </p>
+
+                <img class="img-responsive full-img" src="../../assets/photos-wireframes-swipe-alternatives.png" alt="swipe alternatives"> <br><br>
+
+                <p>At first glance, alternative 2 seems to be the worst choice for comparison between similar photos, because it's extremely hard for users to keep in mind the photos they want to compare when the positions of thumbnails are constantly changing. <span class="highlight highlight-photos">However, since I later decided to create <strong>a separate mode for comparison</strong>, the sole purpose for users to navigate between photos in this page becomes to quickly browse through them. For this purpose, <strong>alternative 2 together with alternative 1 becomes the best choice.</strong></span> If I had time, I would bring it to users or other designers to get their input and validate this design decision.<br><br>
+
+                As for how the redesign is going to change the users' current interactions with photos, <span class="highlight highlight-photos">I explored all the ways users are able to interact with a photo right now, and thought about whether those interactions are more logical to be applied to a group of similar photos, or a single photo.</span>
+                 </p>
+
+                <img class="img-responsive full-img" src="../../assets/photos-detail-existing-features.png" alt="existing features"> <br><br><br><br><br>
+
+
+
+              </div>
+
+              <div id="curating" class="subgroup">
+                <h4>Helping Users Curate Their Photo Library</h4>
+                <p>Another major task users usually need to carry out when they take lots of similar photos is to compare between different shots, delete the bad ones, or select the best ones to view, edit, or share. But this curation process is painful and time-consuming because <span class="highlight highlight-photos">1) users have to manually go through every photo to pick the good and delete the bad, and 2) it is extremely hard to compare between similar photos and spot the differences. How can I make the curation process easier?</span></p>
+
+                <h5 class="photos-h5">Using Machine Learning to Recommend the Best Photos</h5>
+                <p><span class="highlight highlight-photos">One way to relieve users from the burden of selecting the best photos is to suggest the best ones for quick actions.</span> Using Machine Learning, it is possible to identify photos with the best lightings, compositions, and even those in which everyone's smiling. Google Clip has been using similar algorithms to suggest best moments in a video. It would be possible to further apply similar technologies in Google Photos to automatically suggest the best photo within a photo group, and enable users to quickly share it or delete the others.<br><br>
+
+                However, the notion of "a best photo" is highly subjective. <span class="highlight highlight-photos">As a designer, I also want to <strong>give my users control</strong> even when my design leverages the most advanced algorithms to simplify the process.<span> That's why I decided to provide another function to help them compare between similar photos more quickly.
+                 </p>
+
+                <h5 class="photos-h5">Facilitating Comparison</h5>
+                <p>Almost all users I interviewed complained that <span class="highlight highlight-photos">it is so hard to scroll through similar photos and compare between them.</span> Here's how they do the comparison now:</p>
+
+                <p class="p-center-wrapper"><video autoplay muted loop class="video-features" style="max-width:200px">
+                  <source src="../../assets/photos-compare-current.mp4"/>
+                </video></p>
+
+                <p><span class="highlight highlight-photos">As a psychology student, I didn't find this trend surprising.</span> <a href="http://learnforeverlearn.com/changeblindness/" target="_blank">"Change Blindness"</a> is something all people experience. Psychology experiments show that it is particularly hard to compare two slightly different images when they are side by side, or even when they are presented sequentially with a brief blank field in between.<br><br>
+
+                Try identifying the difference between the following two images.
+               </p>
+
+                <img class="img-responsive full-img" src="../../assets/photos-change-blindness.png" alt="change blindness"> <br><br><br>
+
+                <p><strong>It's hard, right?</strong> <br><br>
+
+                <span class="highlight highlight-photos">If side-by-side comparison is already difficult, then think about how hard it is to scroll and see slightly different images one by one, and try to compare the current one with another one you saw 10 seconds ago.</span><br><br>
+
+                The quickest and the most effortless way to compare the differences between 2 images is to <span class="highlight highlight-photos">show them sequentially, with no interruptions in between,</span> similar to how users can compare between edited images and original images in Google Photos, Apple Photos, and Instagram.</p>
+
+                <p class="p-center-wrapper"><video autoplay muted loop class="video-features">
+                  <source src="../../assets/photos-change-blindness.mp4"/>
+                </video></p>
+
+                <p>With these vague directions in mind, I started brainstorming and prototyping potential ideas.
+                </p>
+
+                <h5 class="photos-h5">Design Alternatives</h5>
+                <p><span class="highlight highlight-photos">Since it is hard to use paper or even clickable prototypes to illustrate how users can compare different photos, and whether the comparison method works, I quickly created the following alternatives in Principle and used real photos to illustrate the use cases.</span> I walked through the usage scenario myself and showed the prototypes to others for feedback as well.</p>
+
+
+                <div class="row feature-row">
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features">
+                        <source src="../../assets/photos-comparison-1.mp4"/>
+                      </video>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-alternative-title">
+                        1
+                      </h5>
+
+                      <h6 class="video-alternative-subtitle">
+                        Enable users to double click to pin one photo to the top, and compare other photos with it. Can only perform actions (favorite/delete) on the current pinned photo.
+                      </h6>
+
+                      <p style="margin-bottom:0px"><span class="photos-pros">Pros:</span></p>
+
+                      <ul style="margin-bottom:24px">
+                        <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">Helps users decide whether the current pinned photo is worth saving.</li>
+                      </ul>
+
+                      <p style="margin-bottom:0px"><span class="photos-pros">Cons:</span></p>
+
+                      <ul style="margin-bottom:24px">
+                        <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">Click to compare and double click to change/pin photo doesn't fit with user's mental models.</li>
+                        <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">Cannot quickly favorite/delete other photos unless they're pinned.</li>
+                      </ul>
+                    </div>
+
+
+                  </div>
+
+                  <div class="row feature-row">
+                      <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                        <video autoplay muted loop class="video-features">
+                          <source src="../../assets/photos-comparison-2.mp4"/>
+                        </video>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                        <h5 class="video-alternative-title">
+                          2
+                        </h5>
+
+                        <h6 class="video-alternative-subtitle">
+                          Enable users to pin one photo to the top, and compare other photos with it. Can quickly favorite/delete other photos by dragging them to the corresponding spot. Can swipe left/right on the top to change the pinned photo.
+                        </h6>
+
+                        <p style="margin-bottom:0px"><span class="photos-pros">Pros:</span></p>
+
+                        <ul style="margin-bottom:24px">
+                          <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">Helps users decide whether the current pinned photo is worth saving.</li>
+                          <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">Can perform quick actions on other photos.</li>
+                        </ul>
+
+                        <p style="margin-bottom:0px"><span class="photos-pros">Cons:</span></p>
+
+                        <ul style="margin-bottom:24px">
+                          <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">The dragging action might be difficult to discover or learn.</li>
+                          <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">Cannot quickly pin another photo (need to swipe all the way to find it).</li>
+                        </ul>
+
+                      </div>
+                    </div>
+
+                    <div class="row feature-row">
+                        <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                          <video autoplay muted loop class="video-features">
+                            <source src="../../assets/photos-comparison-3.mp4"/>
+                          </video>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                          <h5 class="video-alternative-title">
+                            3
+                          </h5>
+
+                          <h6 class="video-alternative-subtitle">
+                            Enable users to normally browse all the photos, and compare them to a benchmark to decide whether to favorite or delete.
+                          </h6>
+
+                          <p style="margin-bottom:0px"><span class="photos-pros">Pros:</span></p>
+
+                          <ul style="margin-bottom:24px">
+                            <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">Fits users' existing mental model (swipe left/right or click on thumbnail to navigate between photos)</li>
+                            <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">Helps users decide whether the current photo is worth saving.</li>
+                          </ul>
+
+                          <p style="margin-bottom:0px"><span class="photos-pros">Cons:</span></p>
+
+                          <ul style="margin-bottom:24px">
+                            <li style="margin-left:-22px;font-family:'Circular Std Book'; color:var(--primary-black)">More steps to favorite/delete a photo compared to the second approach.</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <p>Among these 3 approaches, alternatives 1 and 2 are similar since they introduce the interaction of clicking on a thumbnail to compare the clicked photo with a pinned photo. Alternative 3 approaches the problem from another angle, enabling users to browse through the photos naturally and compare with a benchmark if needed.<br><br>
+
+                      Some of the shortcomings of alternatives 1 and 2 can be resolved by merging the two. We can use most of the interactions in alternative 2 and make the following change: instead of letting users double tap or scroll to pin a photo, we can let them drag a thumbnail up to pin it on the screen.<br><br>
+
+                      <span class="highlight highlight-photos">Eventually, <strong>I still decided to further develop the 3rd alternative</strong>, because it doesn't require users to change their habits much.</span> Considering the large user base of the app, it might be hard to let all the users of Google Photos quickly learn the interactions in alternative 2, though once learned, it might be more efficient. <span class="highlight highlight-photos">However, if I had more time, I'd definitely gather more user feedback, or conduct A/B test to decide on the final interaction.</span>
+
+                    </p>
+
+
+                    <h5 class="photos-h5">Separate Mode or Not?</h5>
+                    <p class="small-margin-bottom">I had the option of directly adding the comparison feature to the photo details page, or creating a separate "Compare Mode" to better help users compare photos. <strong>I decided to create a separate mode for it</strong> for the following reasons:</p><br>
+                    <img class="img-responsive full-img" src="../../assets/photos-separate-mode.png" alt="separate modes"> <br><br><br><br><br>
+
+              </div>
+
+
+
+
+              <div id="hi-fi" class="subgroup">
+                <h4>High Fidelity Design</h4>
+                <p>With all the different components in mind, I started diving into details about how I can link them together into a meaningful flow. Again, I used the user tasks to guide my reasoning throughout the process.<br><br>
+
+                As for the visual design aspect, I kept it consistent with the style of Google Photos, following material design guidelines.<br><br>
+                </p>
+
+                <h5 class="photos-h5">User Flow & Prototype</h5>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive full-screen-img" src="../../assets/photos-user-flow.png" alt="photos user flow">
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+              <div class="subgroup">
+                <p class="p-center-wrapper"><a href="https://projects.invisionapp.com/prototype/google-photos-redesign-cjoxx1enk00bbhk011ngd3eq5/play/4e134044" target="_blank"><button class="btn black-button" name="button">View InVision Studio Prototype</button></a> </p><br><br>
+
+                <h5 class="photos-h5">Functions in Use</h5><br><br><br>
+
+                <div class="row feature-row">
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features">
+                        <source src="../../assets/photos-browsing-v2.mp4"/>
+                      </video>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title video-feature-title-photos">
+                        01. Browsing Past Photos
+                      </h5>
+                      <p class="video-feature-content">Similar photos are automatically grouped in the camera roll. The users will see all the photos in the group when they click on it, and will be able to navigate around by clicking on the thumbnails and the bottom. Swiping left and right navigates to another photo group/photo, while tapping on the left/right edge navigates to the next/previous photo within the group.</p>
+                    </div>
+                  </div>
+
+
+                  <div class="row feature-row">
+                      <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                        <h5 class="video-feature-title video-feature-title-photos">
+                          02. Comparing Photos
+                        </h5>
+
+                        <p class="video-feature-content">The best photo recommended by the system is already indicated with a dot. Users can tap on the "Photo Group" icon to enter compare mode. For each photo, they can click and hold to compare it with the pinned photo, which is the recommended one by default. They can then select ones they like, and delete ones they don't like immediately. When they finish, they can either delete all unselected photos, or save the selected ones separately to the library for further actions.</p>
+                      </div>
+
+                      <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                        <video autoplay muted loop class="video-features">
+                          <source src="../../assets/photos-comparison.mp4"/>
+                        </video>
+                      </div>
+                  </div>
+
+
+                  <div class="row feature-row">
+                      <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                        <video autoplay muted loop class="video-features">
+                          <source src="../../assets/photos-edit-group.mp4"/>
+                        </video>
+                      </div>
+
+                      <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                        <h5 class="video-feature-title video-feature-title-photos">
+                          03. Managing Photo Groups
+                        </h5>
+
+                        <p class="video-feature-content">The Machine Learning algorithm might not always put the right photos into Photo Groups. When the Photo Group doesn't make sense to users, they can easily add photos or remove photos from the Photo Group, or even delete the grouping completely (not yet shown in the prototype). </p>
+                      </div>
+                  </div>
+
+
+
+              </div>
+
+
+
+
+
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="future-steps" class="group">
+              <h3>Future Steps</h3>
+              <hr>
+
+
+              <div id="edge-cases" class="subgroup">
+                <h4>Technical Details for Grouping</h4>
+                <p>One of the key functions that determine the success of the design solution is grouping similar photos. But how to define "similar" photos? What's the boundary between one photo group and another, if they're all taken around the same time, with similar peoples, at the same place? There are lots of different use cases for why people would take photos and upload them to Google Photos, which means that we'll need to consider all of them if we're going to change the existing product.<br><br>
+
+                <span class="highlight highlight-photos">If this were a real project, I would definitely start working with engineers from the inception of the grouping idea to make sure that we train the Machine Learning algorithm the right way and consider different edge cases.</span> <br><br>
+
+                In addition, photo groups contain different numbers of photos, and are displayed using different sizes on the camera roll. How do we segment the numbers and map them to different sizes? Should a 16-photo group take up a 2x2 grid or 4x4 grid? Will this differ according to users' habit for taking photos? This is also something I need to <span class="highlight highlight-photos">discuss with engineers and see the real user data</span> to make a final decision.<br><br>
+
+                </p>
+              </div>
+
+              <div id="user-testing" class="subgroup">
+                <h4>Evaluating the Design with Users</h4>
+                <p class="small-margin-bottom"><span class="highlight highlight-photos">Due to the time constraints, I wasn't able to bring the design alternatives or the final design to real users for structured feedback, though I tried my best to casually show them to people and hear their thoughts on them.</span> There are a couple of questions I mentioned earlier that I hoped to further understand if I had more time:</p>
+
+                <ul>
+                  <li>Do the different ways of navigating between photo groups and navigate within a photo group make sense?</li>
+                  <li>Is the alternative I chose for photo comparison their preferred way to compare? Would they prefer another alternative that challenges their existing behaviors but brings more convenience?</li>
+                  <li>In a photo group, would users understand which actions apply to the entire group, and which ones apply only to the current photo?</li>
+                  <li>Do the concepts of pinned photo and recommended photo make sense? Should they be one concept or two?</li>
+                </ul>
+
+                <p><span class="highlight highlight-photos">In addition to answering these questions, I'd like to develop a plan to evaluate the success of my design and identify usability problems.</span> Given the large user base of the app, I might also gradually push the change to part of the users for A/B testing if that's possible.</p>
+              </div>
+
+              <div id="existing-features" class="subgroup">
+                <h4>Integrating with Existing Features</h4>
+                <p><span class="highlight highlight-photos">Adding a new feature to an existing product means that the feature doesn't stand on its own and must fit with the product as a whole.</span> Some existing features in Google Photos that are related to the redesign include Burst Photos and Top Shot in Pixel 3.</p>
+
+                <h5 class="photos-h5">Burst Photos</h5>
+                <p>Google Photos already groups Burst Photos into one group and allows users to set a key photo and delete the rest. However, the functionalities are limited to Burst, so the use cases are different. <span class="highlight highlight-photos">Right now, I'm using a different icon to signify Photo Groups; however, since grouping similar photos and grouping burst photos are similar concepts, I might think further about whether it makes sense to distinguish them, and if not, how to merge these two functionalities into one that fits both use cases.</span></p>
+
+                <h5 class="photos-h5">Top Shot in Pixel 3</h5>
+                <p>Google's Pixel 3 has the Top Shot function, which automatically takes several photos for users on one click, and recommends one to users afterwards. This function is approaching people's problem of having too many similar photos from another angle--if the phone automatically takes a number of photos and selects the best, then the user won't need to take a lot of photos of the same thing in the first place as a fail safe.<br><br>
+
+                <span class="highlight highlight-photos">However, I believe that the grouping function is still necessary because 1) Top Shot is only available on Pixel 3, not on other smartphones or cameras. It might take a long time for people to stop taking multiple similar photos even after functions like Top Shot becomes commonplace. 2) Even then, people would still like to experiment with slightly different angles and lightings when taking photographs. That's a use case in which we still need to help them group similar photos afterwards.</span><br><br>
+
+                There are several similarities between Top Shot and Photo Groups, and both are related to Google Photos. As a future step, I'll need to think about how to make their interfaces/interactions consistent.
+                </p>
+              </div>
+
+              <div id="web-ui" class="subgroup">
+                <h4>Extending the UI to Other Platforms</h4>
+                <p>Google Photos is cross platform on iOS, Android, and Web. Adding this feature means that I'll need to consider how it will change the UI in other platforms, for different screen sizes.</p>
+              </div>
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="what-i-learned" class="group">
+              <h3>What I Learned</h3>
+              <hr>
+              <div id="redesign" class="subgroup">
+                <h4>Considerations for Redesign</h4>
+                <p><span class="highlight highlight-photos">This is my first time redesigning an existing product with a large user base, and adding a new feature to it. It pushed me to think deeply about how the new feature will change the app's existing flows, interactions, and even the logic behind them.</span> For example, by introducing Photo Groups, I needed to think about how each function that used to be applied to only one photo would be applied to a Photo Group.<br><br>
+
+                <span class="highlight highlight-photos">I tried my best to not disrupt the existing functionalities that make sense for the users, so that while they are using the app for other purposes, they won't notice the functionality change.</span><br><br>
+
+                Because of the large user group, for the interactions inside the new functionality, <span class="highlight highlight-photos">I still made more conservative choices to choose those that fit better with users' existing mental models. I'm not sure if this is the best approach for redesigns, so I'd love to learn and discuss more about it!</span></p>
+              </div>
+
+              <div id="ideas" class="subgroup">
+                <h4>Capturing Creative Ideas</h4>
+                <p>I learned about the importance of capturing creative thoughts in <a href="https://youtu.be/L1pBhHjGKvI?t=956" target="_blank">an interview with IDEO's Tom Kelley.</a> I also learned before that sometimes, creative ideas just come to mind at unexpected times as long as you've thought about the topic enough.<br><br>
+
+                <span class="highlight highlight-photos">While I was doing this project, I made sure to always capture any idea that comes to my mind, regardless of their quality, on my Notes app.</span> Travelling during the Thanksgiving break also gave me down times to let my mind wander and generate new ideas. <span class="highlight highlight-photos">I'd then find a time to sit down, look through them and build on them.</span> Several of them ended up in the final design of the feature. I'll keep on doing this for my design in the future.</p>
+              </div>
+
+            </section>
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+            <section class="group">
+              <div class="subgroup">
+                <p>Yayyyyyyyyy you made it! Thank you all for reading through this case study! Hope you enjoyed learning about my design and thought process. As I said, this is my first time redesigning an existing app with a large user group, so I'd love hear your feedback and learn from you! :)</p>
+              </div>
+            </section>
+        </div>
+      </div>
+    </div>
+
+    <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+    <div class="container-fluid">
+      <div class="row footer-row">
+        <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a class="hvr-underline-from-left" href="../home.html#my-work" >All</a> /
+            <a class="hvr-underline-from-left" href="./eatxplore.html">Eatxplore</a> /
+            <a class="selected-footer" href="./photos.html">Google Photos Redesign</a> /
+            <a class="hvr-underline-from-left" href="./mirror-mirror.html">Mirror Mirror</a> /
+            <a class="hvr-underline-from-left" href="./THD.html">My Home Depot Internship</a> /
+            <a class="hvr-underline-from-left" href="./cook-fresh.html" >Cook Fresh</a> /
+            <a class="hvr-underline-from-left" href="./up-up.html" >Up & Up</a> /
+            <a class="hvr-underline-from-left" href="./rei-backpack.html" >REI Backpack Finder</a> /
+            <a class="hvr-underline-from-left" href="./thriller.html" >The Resurrected</a>
+          </p>
+          <br>
+          <br>
+          <p class="footer-text">Designed and Handcoded with ♥ and ♫</p>
+        </div>
+        <div class="footer-icons col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a href="https://dribbble.com/yanfengjin" target="_blank"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/yanfeng-jin-tony-80533455/" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@yanfengjin" target="_blank"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+            <a href="mailto:yjin@gatech.edu" target="_blank"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a>
+          </p>
+          <br>
+          <p class="footer-text-small">Tony Yanfeng Jin © 2017-2018 All Rights Reserved</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+</html>

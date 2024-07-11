@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <title>Ford Scooter</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="shortcut icon" type="image/x-icon" href="../assets/logos/farhan_logo.ico">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel = "stylesheet" type = "text/css" href = "../../css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../../css/fonts.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../../css/zoom.css" rel="stylesheet">
+    <script src="../../js/transition.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://use.fontawesome.com/a891bb0a11.js"></script>
+    <script src="../../js/script.js" charset="utf-8"></script>
+
+
+
+    <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1409449789");
+    </script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-nav">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../home.html">Farhan Ahmed</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="collapsible-nav">
+        <ul class="nav navbar-nav">
+          <li><a class="selected hvr-underline-from-left" href="../home.html#my-work">Works</a></li>
+          <li><a class="hvr-underline-from-left" href="../../assets/resume/Md_Farhan_Ahmed_Resume (3).pdf" target="_blank">Resume</a></li>
+          <li><a class="hvr-underline-from-left" href="../about-me.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 50px">
+        <nav class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <div class="bs-docs-sidebar">
+            <ul class="nav nav-stacked"id="sidebar">
+
+              <li>
+                <a href="#overview">Overview</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#problem">Problem</a></li>
+                  <li><a href="#solution">Solution</a></li>
+                  <li><a href="#methods">Our Approach</a></li>
+                  <li><a href="#my-role">My Contribution</a></li>
+                  <!-- <li><a href="#lessons-learned">What I Learned</a></li> -->
+                </ul>
+              </li>
+
+              <li>
+                <a href="#research">Research</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#comp-analysis">Competitive Analysis</a></li>
+                  <li><a href="#interviews">Interviews & Affinity Mapping</a></li>
+                  <li><a href="#personas">Personas</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#design">Design</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#ideation">Ideation</a></li>
+                  <li><a href="#wireframes">Sketches & Wireframes</a></li>
+                  <li><a href="#user-feedback">User Feedback & Revised Design Goals</a></li>
+                  <li><a href="#hifi-design-v1">Hign-Fidelity Design - Iteration 1</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#evaluation">Evaluation & Iterations</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#user-testing">User Testing Process</a></li>
+                  <li><a href="#success">Measuring Success</a></li>
+                  <li><a href="#results">Results</a></li>
+                  <li><a href="#iterations">Feedback & Design Iterations</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#prototype">Latest Prototype</a>
+              </li>
+
+              <li>
+                <a href="#future-steps">Future Steps</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#more-reviews">Encouraging More Reviews</a></li>
+                  <li><a href="#gamify">Gamifying the Experience</a></li>
+                  <li><a href="#dietary-constraints">Customizing Dietary Constraints</a></li>
+                  <li><a href="#review-filters">Filters & Sorting Functions for Reviews</a></li>
+                  <li><a href="#languages">Designing for Different Languages</a></li>
+                </ul>
+              </li>
+
+              <!-- <li>
+                <a href="#evaluate">Evaluate</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#usability">Usability Testing</a></li>
+                  <li><a href="#design-iterations">Design Iterations</a></li>
+                </ul>
+              </li> -->
+
+            </ul>
+          </div>
+        </nav>
+
+
+        <div class="bg bg-eatxplore" data-aos="fade-up" data-aos-duration="600"></div>
+        <div class="jumbotron" data-aos="fade-up" data-aos-duration="600">
+          <div class="jumbotron-text">
+          </div>
+        </div>
+
+
+
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content first-section">
+          <!-- <div data-aos="fade-up" data-aos-duration="600">
+            <h1 class="article-title">Mirror Mirror</h1>
+
+            <p class="article-subtitle">Helping emerging adults reflect on their past purchasing decisions and form good financial habits</p>
+            <hr>
+
+            <img src="../../assets/walker-perspective3.png" alt="Financial Literacy" class="img-responsive col-centered full-img">
+          </div> -->
+
+
+          <section id="overview" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h6>           </h6><br>
+              <h3>Overview</h3>
+              <hr>
+              <div id="problem" class="subgroup">
+                <h4>Problem</h4>
+                <p>International students experience lots of difficulties ordering in ethnic restaurants in the U.S.. Even the most common terms like "quesadillas" or "lasagna" sound foreign to them due to lack of prior exposure. <span class="highlight highlight-eatxplore">A lot of them feel embarrassed and frustrated visiting ethnic restaurants, and end up not exploring the diverse cuisine option available in the U.S..</span></p>
+              </div>
+          </section>
+        </div>
+        <img data-aos="fade-up" data-aos-duration="600" class="img-responsive large-img" src="../../assets/eatxplore-problem-framing.png" alt="Problem Framing"> <br><br>
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+          <section class="group">
+              <div class="row">
+                <div  class="subgroup-left-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <h4 id="solution">Solution</h4>
+                    <p>We designed Eatxplore, <span class="highlight highlight-eatxplore">a mobile app that empowers our users by providing personalized dish recommendations and reviews to them based on their own ethnicity and the cuisine of the restaurant.</span> It also enables users to quickly see the dish/ingredient name in their own language, and alerts them of potential dietary constraints based on the dish's ingredients.</p>
+                </div>
+
+                <div class="subgroup-right-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <h4>My Role</h4>
+                  <p>UX Design/Research Lead</p>
+                  <h4>Timeline</h4>
+                  <p>Jan. 2018 - Apr. 2018 <br>Refined in Sept. 2018 </p>
+                  <h4>Team Members</h4>
+                  <p>Tony Jin, Danrui Sun, John Baek (Developer), Victor Kim (Developer)</p>
+                  <h4></h4>
+                  <h4>Tools</h4>
+                  <p>Balsamiq, Sketch, InVision, Framer X</p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+          </section>
+
+          <div class="subgroup">
+
+              <div class="row feature-row">
+                  <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                    <video autoplay muted loop class="video-features">
+                      <source src="../../assets/eatxplore-recommendations.mp4"/>
+                    </video>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                    <h5 class="video-feature-title video-feature-title-eatxplore">
+                      Tailored Recommendations
+                    </h5>
+
+                    <h6 class="video-feature-subtitle">
+                      Whether you want something familiar or something new, we’ve got you covered.
+                    </h6>
+
+                    <p class="video-feature-content">Eatxplore recommends dishes based on the your own ethnic background as well as the cuisine of the reataurant. Whether you want to be adventurous or conservative in your choice, you can find the right recommendations to quickly get you started.</p>
+                  </div>
+                </div>
+
+
+                <div class="row feature-row">
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title video-feature-title-eatxplore">
+                        Dish Details at a Glance
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        All the information you need to make an order decision, at one place.
+                      </h6>
+
+                      <p class="video-feature-content">Want a quick overview of all the ingredients? Don’t know whether the dish meets your dietary needs? Can’t pronounce the dish name? No more Googling. You’ll find everything you need in Eatxplore at a glance.</p>
+                    </div>
+
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features">
+                        <source src="../../assets/eatxplore-steak-fajitas-v2.mp4"/>
+                      </video>
+                    </div>
+                </div>
+
+
+                <div class="row feature-row">
+                    <div class=" col-xs-12 col-sm-6 col-md-5 col-lg-5">
+                      <video autoplay muted loop class="video-features">
+                        <source src="../../assets/eatxplore-capture-menu.mp4"/>
+                      </video>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
+
+                      <h5 class="video-feature-title video-feature-title-eatxplore">
+                        Available for All Restaurants
+                      </h5>
+
+                      <h6 class="video-feature-subtitle">
+                        Instantly get photos and translations for restaurants not in our database, with AI and Crowdsourcing.
+                      </h6>
+
+                      <p class="video-feature-content">If the restaurant is not in our database, simply take a photo of the menu, and we’ll provide you with a temporary translation of the menu, as well as photos for each dish to help you order. We’ll add that restaurant to our database thanks to your photo.</p>
+                    </div>
+                </div>
+                <p class="p-center-wrapper"><a href="#prototype" target="_blank"><button class="btn black-button" name="button">Jump to Prototype</button></a> </p>
+          </div>
+
+          <div id="methods" class="subgroup">
+              <h4>Our Approach</h4>
+              <img class="img-responsive full-img" src="../../assets/eatxplore-design-process.png" alt="">
+          </div>
+
+          <div id="my-role" class="subgroup">
+                  <h4>My Contribution</h4>
+                  <p>As the Lead UX Designer and Researcher on the team, <span class="highlight highlight-eatxplore">I advocated for conducting user interviews, synthesis sessions and brainstorming sessions before arriving at solutions.</span> <br><br>
+
+                    <span class="highlight highlight-eatxplore">I led all the research & design activities with other engineers</span>, created wireframes, high-fidelity designs, and interactive prototypes for user feedback & testing. I created the concept video and <span class="highlight highlight-eatxplore">led the presentation of the app</span> during the Georgia Tech CIC competition. <br><br>
+
+                    After the group project finished, <span class="highlight highlight-eatxplore">I refined the design on my own, conducted more testing sessions, and iterated on the design for learning purposes.</span>
+                  </p>
+              </div>
+
+
+
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <section id="research" class="group" >
+            <div data-aos="fade-up" data-aos-duration="600">
+              <h3>Research</h3>
+              <hr>
+              <div class="subgroup">
+                  <p></p>
+              </div>
+
+              <div id="comp-analysis" class="subgroup">
+                  <h4>Competitive Analysis</h4>
+
+                  <p>We first looked into the market to examine whether existing products can help international students better order in ethnic restaurants.
+                  </p>
+
+                  <img class="img-responsive" src="../../assets/eatxplore-comp-analysis-all.png" alt="competitive analysis"> <br><br>
+
+                  <p class="p-center-wrapper"><button data-toggle="collapse" data-target="#comp-analysis-details" class="btn black-button" name="button">See Detailed Analysis</button></p>
+
+                  <div class="collapse" id="comp-analysis-details">
+                    <img class="img-responsive" src="../../assets/eatxplore-comp-analysis.png" alt="competitive analysis"> <br><br>
+                  </div>
+
+                  <p class="small-margin-bottom">We found that: </p>
+                  <ul>
+                    <li>Apps similar to Yelp and TripAdvisor contain restaurant menus and reviews, but <span class="highlight highlight-eatxplore">the content is generally American-centric.</span></li>
+
+                    <li>With dish & ingredient names in languages like Spanish or Italian, internationals who had no exposure to those dishes still cannot understand what each dish is made of.</li>
+
+                    <li>Internationals can use translation tools like Google Translate or Waygo to translate dish names and ingredients, but <span class="highlight highlight-eatxplore">these tools only provide a brief translation, with no additional information on the dish’s taste or quality.</span></li>
+
+                    <li>People need to search for each word they don’t understand, which <span class="highlight highlight-eatxplore">takes time and effort.</span></li>
+                  </ul>
+
+                  <p>Therefore, we hope to create a tool that can <span class="highlight highlight-eatxplore">tailor to the needs of internationals, to help them quickly understand what each dish is made of, and predict which dish they might like.</span></p>
+              </div>
+
+
+              <div id="interviews" class="subgroup">
+                <h4>Interviews & Affinity Mapping</h4>
+                <p>To better understand how international students currently order in ethnic restaurants and identify potential problems, <span class="highlight highlight-eatxplore">I advocated for conducting user interviews first</span> before diving into solutions. <span class="highlight highlight-eatxplore">I also invited our developers to participate in affinity mapping sessions with us, so that as a group, we can brainstorm solutions based on our findings.</span> </p>
+
+                  <img class="img-responsive full-img" src="../../assets/eatxplore-affinity-mapping.jpg" alt="">  <br><br><br>
+
+
+                  <p class="small-margin-bottom">We interviewed around 10 people who have stayed in the U.S. for different amount of time, ranging from 4 months to 5 years. We found that:
+                  </p>
+                  <ul>
+                    <li><span class="highlight highlight-eatxplore">Even those who have been in the U.S. for a long time struggle to understand dish names and ingredients</span> in ethnic restaurants, and need to Google them one by one.</li>
+
+                    <li>International students usually want to see <span class="highlight highlight-eatxplore">pictures of the food</span>, but that is not always available on the menu.</li>
+
+                    <li>Some people want <span class="highlight highlight-eatxplore">dish recommendations from those who have similar ethnic backgrounds</span> as they do; others want <span class="highlight highlight-eatxplore">recommendations from those who are familiar with the dish.</span></li>
+
+                    <li>Some people have <span class="highlight highlight-eatxplore">difficulties pronouncing dish names</span>, which can be embarrassing in front of American friends.</li>
+
+                  </ul>
+                  <p>Because of these difficulties, a number of internationals choose to <span class="highlight highlight-eatxplore">stick to familiar dishes</span> when ordering in these restaurants; others end up <span class="highlight highlight-eatxplore">not visiting these restaurants at all</span>, even when invited by their American friends. </p>
+              </div>
+            </div>
+
+
+              <div id="personas" class="subgroup">
+                <h4>Personas</h4>
+                <p>To better guide our design and enable everyone on the team to empathize with our users, I further synthesized the interview results and came up with the following personas:</p>
+
+                <img class="img-responsive full-img" data-action="zoom" src="../../assets/eatxplore-personas.png" alt="Personas">
+                <br><br><br>
+
+              </div>
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="design" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>Design</h3>
+              <hr>
+
+              <div id="ideation" class="subgroup">
+                <h4>Ideation</h4>
+                <p class="small-margin-bottom">With our research findings and personas in mind, <span class="highlight highlight-eatxplore">I invited our engineers and the other designer to brainstorm solutions together.<span> I encouraged them to come up with as many ideas as possible without considering feasibility at this stage.</p>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive large-img" src="../../assets/eatxplore-ideation.png" alt="Mind Map for Ideation" data-aos="fade-up" data-aos-duration="600">
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+              <div class="subgroup">
+                <br><br><br>
+                <p>We then went through the ideas and <span class="highlight highlight-eatxplore">discussed their implementation feasibility.</span> For example, creating a taste profile for each user based on the kind of dishes they like seems to be an excellent solution; however, the machine learning algorithm behind it would be too complex for our developers to implement within the time constraints. Therefore, <span class="highlight highlight-eatxplore">we had to make a compromise and provide recommendations based on users’ ethnicity as our first step.</span></p>
+
+                <p>Eventually, we settled on the following core functionalities:</p>
+                <img class="img-responsive full-img"src="../../assets/eatxplore-main-features.png" alt="Main Features"><br><br>
+              </div>
+
+              <div id="wireframes" class="subgroup">
+                <h4>Sketches & Wireframes</h4>
+                <p class="small-margin-bottom">I quickly drew out sketches of these functionalities with the team to make sure that <span class="highlight highlight-eatxplore">everyone's on the same page.</span></p> <br>
+                <img class="img-responsive full-img"src="../../assets/eatxplore-sketches.jpg" alt="Sketches"> <br> <br> <br>
+                <p class="small-margin-bottom">We created the following wireframes and brought <a href="https://invis.io/CGO8NKQZNDQ" target="_blank">an InVision prototype</a> to our potential users for feedback.</p>
+
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive full-screen-img"src="../../assets/eatxplore-wireframes.png" alt="Wireframes"> <br><br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+              <div class="subgroup">
+              </div>
+
+              <div id="user-feedback" class="subgroup">
+                <h4>User Feedback & Revised Design Goals</h4>
+
+                <p><span class="highlight highlight-eatxplore">All users liked the customized dish recommendations and the function to directly look up ingredient information.</span> This was reassuring for us, since these two functions are our primary focus, and what distinguishes us from existing apps.</p>
+
+                <h5 class="eatxplore-h5">Avoiding Embarrassment & Empowering our Users</h5>
+
+                <p>Some users were confused about ordering directly in the app, since it is not a convention for them to order in an app within a restaurant, especially when others sitting on the same table are still ordering by talking to the waiters/waitresses. <span class="highlight highlight-eatxplore">They were also afraid that by being the only one ordering in the app, they would stand out among their friends and feel embarrassed.</span> <br><br>
+
+                Since the goal of our app is to help them feel less embarrassed while ordering in these restaurants, <span class="highlight highlight-eatxplore">we decided to get rid of the ordering function,</span> and focus our attention on helping them better communicate with waiters.
+                <br><br>
+                After talking with more users, we came to realize that one of our most important goals is to <span class="highlight highlight-eatxplore">empower our users</span>, who are not confident about how to order dishes right now.
+                </p>
+
+                <h5 class="eatxplore-h5">Refined Design Goals & Features</h5>
+
+                <p>We refined our design goals and matched the features we hoped to implement to the goals we hope to achieve:</p>
+
+                <img class="img-responsive full-img"src="../../assets/eatxplore-revised-goals.png" alt="Main Features"> <br><br><br>
+
+                <p>The rationale for the last point is that for the international student group we’re targeting, they usually know the English language well enough to live and study in the U.S.; they just have little exposure to the diverse cuisines in the U.S., and feel intimidated to get started. <span class="highlight highlight-eatxplore">Therefore, instead of providing them with a tool that’s completely in their language, we hope to build something that’s primarily in English, with translations on demand.</span> In this way, we hope that our users can gradually learn the terms they don’t understand, and rely on our tool less and less as they use it more. </p>
+
+              </div>
+
+              <div id="hifi-design-v1" class="subgroup">
+                <h4>High-Fidelity Design - Iteration 1</h4>
+
+                <p class="small-margin-bottom">For the first iteration, <span class="highlight highlight-eatxplore">my primary goal is to validate whether the design helps different types of users be more confident, make ordering decisions faster, feel comfortable visiting ethnic restaurants and ordering in front of people who know the cuisine well, as well as learn the basic terms of different cuisines over time.</span> I also hoped to test the <span class="highlight highlight-eatxplore">usability</span> of the design, so that I can improve upon it. <br><br>
+
+                I used Sketch and InVision to create a basic interactive prototype to illustrate enough functionalities for me to test my hypotheses.</p>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive full-screen-img"src="../../assets/eatxplore-hifi-v1-small.png" alt="Hifi Design v1"> <br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <div class="subgroup">
+              <p class="p-center-wrapper"><a href="https://invis.io/EXOC9OSYSKU#/323868717_Onboarding_Questions_1" target="_blank"><button class="btn black-button" name="button">View Iteration 1 Prototype</button></a> </p>
+            </div>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="evaluation" class="group" >
+              <div data-aos="fade-up" data-aos-duration="600">
+                <h3>Evaluation & Iterations</h3>
+                <hr>
+
+                <div id="user-testing" class="subgroup">
+                  <h4>User Testing Process</h4>
+                  <p class="small-margin-bottom"><span class="highlight highlight-eatxplore">With the goals I had for this iteration in mind</span>, I moderated user feedback sessions with 5 users with <span class="highlight highlight-eatxplore">different attitudes</span> towards trying new food and <span class="highlight highlight-eatxplore">different levels of familiarity</span> with Mexican cuisine (the example I used in my prototype). Here's a brief overview of the process:</p>
+
+                  <ul>
+                    <li>Introduce the project goal, and put users at ease.</li>
+                    <li>Describe the scenario, set up the context, and let users use the app while thinking aloud.</li>
+                    <li>Ask follow up questions and gather feedback.</li>
+                    <li>Let users fill out a questionnaire. Thank them for participation.</li>
+                  </ul>
+
+
+                  <p class="p-center-wrapper"><a href="https://drive.google.com/open?id=1bCl0eGKC1TQvqdsGCxyCv_XYsV7wPhby" target="_blank"><button class="btn black-button" name="button">See Detailed Script & Process</button></a></p>
+                </div>
+
+
+              </div>
+
+
+              <div id="success" class="subgroup">
+                <h4>Measuring Success</h4>
+                <p>To quantitatively measure the success of the design, <span class="highlight highlight-eatxplore">I broke down the larger design goals into detailed, measurable ones</span>, and developed a <span class="highlight highlight-eatxplore">questionnaire</span> to help me answer those questions.</p>
+                <img class="img-responsive full-img"data-action="zoom" src="../../assets/eatxplore-evaluation-metrics.png" alt="Evaluation Metrics"> <br><br>
+                <p class="p-center-wrapper"><a href="https://drive.google.com/open?id=1gkfR0mD5LziCKJgERg2RQJP6g0xdcSU3" target="_blank"><button class="btn black-button" name="button">See Detailed Questionnaire</button></a></p>
+              </div>
+
+              <div id="results" class="subgroup">
+
+                <h4>Results</h4>
+
+                <p class="small-margin-bottom">I was able to gather a lot of positive feedback on the prototype, from <span class="highlight highlight-eatxplore">users with different dietary constraints, different attitudes towards trying new food, and different familiarity levels with Mexican food</span>. Here's a summary of how people rate their own ordering speed, confidence, comfortableness in front of friends, and frequency of future visits to ethnic restaurants, with the app available:</p> <br><br>
+                <img class="img-responsive full-img" data-action="zoom" src="../../assets/eatxplore-v1-testing-chart.png" alt="Evaluation Results"> <br><br><br>
+                <p>In addition, <span class="highlight highlight-eatxplore">5 out of 5 users</span> believe that the tool will gradually help them learn about the common terms used in unfamiliar cuisines. All of them are also willing to recommend the app to a friend, believe that it is a meaningful alternative to existing apps like Yelp and Google Translate to help them order dishes in ethnic restaurants.</p>
+              </div>
+
+              <div id="iterations" class="subgroup">
+
+
+                <h4>Feedback & Design Iterations</h4>
+                <p>To learn about online design tools, I used Mural to organize each user's feedback, and grouped them by themes and features.</p>
+                <img class="img-responsive full-img" data-action="zoom" src="../../assets/eatxplore-v1-testing-results.png" alt="Evaluation Results"> <br>
+                <p class="img-caption">Different colored sticky notes represent feedback from different users. Notes with borders represent positive feedback.</p>
+
+                <h5 class="eatxplore-h5">Dish Recommendations & Menu</h5>
+                <p class="small-margin-bottom">Instead of dividing recommendations based on users' ethnic background and the restaurant's cuisine, <span class="highlight highlight-eatxplore">most users wanted to see recommendations based on all users' feedback, with the ability to apply filters as needed.</span> <br><br>
+
+                In addition, most users did not like the restaurant's name and the menu navigation controls at the bottom. My original intention to put it there was to allow users to easily reach the navigation with their thumb to quickly navigate through the menu. However, users either did not notice it, or noticed it, but expected to be able to drag it up. <span class="highlight highlight-eatxplore">Since it is important to give users a sense of where they are in the app, I had to make the compromise and move the restaurant name and menu navigations to the top, so that users can notice them more easily</span>.</p>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive large-img" src="../../assets/eatxplore-v2-recommendations.png" alt="Evaluation Results"> <br><br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+              <div class="subgroup">
+                <p class="small-margin-bottom">For the detailed menu, most users expected to be able to quickly get enough information about a dish at a glance; this information includes <span class="highlight highlight-eatxplore">the dish's ratings and whether it conflicts with their dietary needs</span>. Users either did not notice or did not understand the current dietary conflict alert symbol, and wanted it to convey more information, such as what ingredients conflict with their dietary needs. <br><br>
+                Based on user feedback, I made some visual design changes to <span class="highlight highlight-eatxplore">make the menu more readable, and only show the most important information users expect to see.</span> </p>
+              </div>
+              </section>
+            </div>
+          <img class="img-responsive large-img" src="../../assets/eatxplore-v2-menu.png" alt="Evaluation Results"> <br><br><br><br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+              <div class="subgroup">
+                <h5 class="eatxplore-h5">Dish Details, Ingredients & Reviews</h5>
+                <p class="small-margin-bottom">For the dish details page, again, <span class="highlight highlight-eatxplore">users expect to have a quick glance at the page and decide whether they'd order this dish or not.</span> They'd like to see more photos of the dish, and quickly understand what it's made of. The current design requires users to click into ingredients they don't understand to see their translations; futhermore, few users realize that the ingredients are clickable. <span class="highlight highlight-eatxplore">Therefore, I added translations of ingredients on this page, and added signifiers to make it more obvious that the ingredients are clickable.</span></p>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive large-img" data-action="zoom" src="../../assets/eatxplore-v2-fajitas.png" alt="Steak Fajitas"> <br><br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+              <div class="subgroup">
+                <p class="small-margin-bottom">Similar to my changes to recommendations, I changed the reviews layout to <span class="highlight highlight-eatxplore">give users an overview of how people think about the dish in general, while giving them the ability to filter</span> according to their own ethnic background and the restaurant's cuisine. Since users found the rating comparison between different ethnic groups informative, I put the ratings by different ethnic groups side by side to <span class="highlight highlight-eatxplore">facilitate this comparison.</span> Based on user feedback, I also added photos and helpfulness ratings to the review, and enabled users to write review in their native langauges. </p>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive large-img" data-action="zoom" src="../../assets/eatxplore-v2-fajitas-scroll.png" alt="Steak Fajitas"> <br><br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+
+              <div class="subgroup">
+                <p>So far, I've only made changes to the main functionalities based on user feedback. I'm still working on redesigning other screens & functionalities, and I'll post updates to them as soon as I finish the redesign.</p>
+              </div>
+            </section>
+
+
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="prototype" class="group" >
+              <h3>Latest Prototype</h3>
+              <hr>
+              <!-- <div id="final-prototype" class="subgroup"> -->
+                <!-- <h4>Final Prototype</h4> -->
+                <div class="subgroup">
+                  <p class="small-margin-bottom">Here's the latest prototype with some of my updated changes. Further changes to the design based on user feedback will be posted soon.</p>
+                  <p class="hidden-lg hidden-md hidden-sm">If the embedded prototype doesn't show up normally on mobile devices, please view it <a  href="https://invis.io/E7OXOHZNK8M">here</a>.</p>
+                  <iframe style="transform: scale(0.75)" class="hidden-xs"width="438" height="930" src="https://invis.io/E7OXOHZNK8M" frameborder="0" allowfullscreen></iframe>
+                <!-- </div> -->
+                </div>
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="future-steps" class="group">
+              <h3>Future Steps</h3>
+              <hr>
+              <div id="more-reviews" class="subgroup">
+                <h4>Encouraging More Reviews</h4>
+                <p>Our app's core functions rely heavily on users' reviews. However, the app is mostly needed when users are deciding what to order. <span class="highlight highlight-eatxplore">How can we encourage users to open the app and review the dishes they ordered after they leave a restaurant, when they have no motivation to open the app?</span> I listed three alternatives for solving this problem together with their pros and cons. <span class="highlight highlight-eatxplore">Future research/testing is needed to narrow down to the best options.</span></p>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive large-img" src="../../assets/eatxplore-challenges-reviews.png" alt="Steak Fajitas"> <br><br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+            <section class="group">
+              <div id="gamify" class="subgroup">
+                <h4>Gamifying the Experience</h4>
+                <p>Since users are not ordering directly in our app, <span class="highlight highlight-eatxplore">it is hard for us to keep track of what dishes they ordered,</span> so that we can remind them to review those dishes, or to recommend them new ones based on their order history. One way to encourage users to log their orders is through gamifying the experience. <span class="highlight highlight-eatxplore">As a future step, I'd like to explore whether collecting stickers for dishes, badges for reviews, and using a leaderboard to compete with friends can encourage users to log and review what they ordered.</span></p>
+              </div>
+
+              <div id="dietary-constraints" class="subgroup">
+                <h4>Customizing Dietary Constraints</h4>
+                <p>People's dietary needs differ a lot. In order to better remind people of potential dietary conflicts, I'll first need to create a comprehensive list of common dietary constraints, and map them to ingredients that might conflict with them. But that's not enough. Some users reported having specific dietary needs, such as not eating carrots, garlic, or ginger. <span class="highlight highlight-eatxplore">To provide a more personalized experience, I'll need to enable users to select from a wide range of predefined dietary constraints, and customize them if necesssary.</span></p>
+              </div>
+              <div id="review-filters" class="subgroup">
+                <h4>Filters & Sorting Functions for Reviews</h4>
+                <p>Right now, we've designed the essential function for users to filter the reviews based on their own ethnic background and the restaurant's cuisine. Some users mentioned wanting to only see 1-star reviews or 5-star reviews to get a wide range of opinions. Others wanted to sort reviews by different parameters (recency, helpfulness, etc.). <span class="highlight highlight-eatxplore">I'll need to conduct further research to figure out the most important filters/sorting methods that need to be implemented.</span></p>
+                <!-- <p class="small-margin-bottom">I am still working on deriving design implications from the results and updating the design. I will post further updates to this project soon.</p> -->
+                <!-- <h5 class="eatxplore-h5">Evaluation</h5> -->
+              </div>
+              <div id="languages" class="subgroup">
+                <h4>Designing for Different Languages</h4>
+                <p>So far, the app only demonstrates the use case of a Chinese customer visiting a Mexican restaurant. What if the user is Korean? German? Indian? It is true that words are usually shorter in Chinese compared to English. <span class="highlight highlight-eatxplore">What if the user's language (e.g. German) contains longer words and looks visually similar to English?</span> That would probably influence the visual design of the app. If I were to continue this project, internationalization will be one of the major challenges in the UI Design.</p>
+              </div>
+            </section>
+        </div>
+      </div>
+    </div>
+
+    <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+    <div class="container-fluid">
+      <div class="row footer-row">
+        <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a class="hvr-underline-from-left" href="../home.html#my-work" >All</a> /
+            <a class="selected-footer" href="./eatxplore.html">Eatxplore</a> /
+            <a class="hvr-underline-from-left" href="./photos.html">Google Photos Redesign</a> /
+            <a class="hvr-underline-from-left" href="./mirror-mirror.html">Mirror Mirror</a> /
+            <a class="hvr-underline-from-left" href="./THD.html">My Home Depot Internship</a> /
+            <a class="hvr-underline-from-left" href="./cook-fresh.html" >Cook Fresh</a> /
+            <a class="hvr-underline-from-left" href="./up-up.html" >Up & Up</a> /
+            <a class="hvr-underline-from-left" href="./rei-backpack.html" >REI Backpack Finder</a> /
+            <a class="hvr-underline-from-left" href="./thriller.html" >The Resurrected</a>
+          </p>
+          <br>
+          <br>
+          <p class="footer-text">Designed and Handcoded with ♥ and ♫</p>
+        </div>
+        <div class="footer-icons col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a href="https://dribbble.com/yanfengjin" target="_blank"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/yanfeng-jin-tony-80533455/" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@yanfengjin" target="_blank"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+            <a href="mailto:yjin@gatech.edu" target="_blank"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a>
+          </p>
+          <br>
+          <p class="footer-text-small">Tony Yanfeng Jin © 2017-2018 All Rights Reserved</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+</html>

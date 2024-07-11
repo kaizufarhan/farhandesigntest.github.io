@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111016994-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111016994-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <title>Cook Fresh | Yanfeng Jin (Tony)</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="shortcut icon" type="image/x-icon" href="../../assets/icon-tab.ico">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel = "stylesheet" type = "text/css" href = "../../css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../../css/fonts.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet"> -->
+    <link href="../../css/zoom.css" rel="stylesheet">
+    <script src="../../js/transition.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="https://use.fontawesome.com/a891bb0a11.js"></script>
+    <script src="../../js/script.js" charset="utf-8"></script>
+
+
+
+    <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1409449789");
+    </script>
+
+  </head>
+
+  <body>
+    <div class="spinner-wrapper">
+      <div class="p-center-wrapper">
+        <div class="la-line-scale la-dark">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <h4 id="preloader-title"></h4>
+            <h5 id="preloader-content"></h5>
+        </div>
+
+      </div>
+
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-nav">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../home.html">Tony Jin</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="collapsible-nav">
+        <ul class="nav navbar-nav">
+          <li><a class="selected hvr-underline-from-left" href="../home.html#my-work">Projects</a></li>
+          <li><a class="hvr-underline-from-left" href="../../assets/Yanfeng-Jin-Resume-v8.3.pdf" target="_blank">Resume</a></li>
+          <li><a class="hvr-underline-from-left" href="https://medium.com/@yanfengjin" target="_blank">Writings</a></li>
+          <li><a class="hvr-underline-from-left" href="../about-me.html">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 50px">
+        <nav class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <div class="bs-docs-sidebar">
+            <ul class="nav nav-stacked"id="sidebar">
+
+              <li>
+                <a href="#overview">Overview</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#problem">Problem</a></li>
+                  <li><a href="#solution">Solution</a></li>
+                  <!-- <li><a href="#methods">Our Approach</a></li>  -->
+                  <li><a href="#my-role">My Contribution</a></li>
+                  <li><a href="#design-outcome">Design Outcome</a></li>
+                  <!-- <li><a href="#lessons-learned">What I Learned</a></li> -->
+                </ul>
+              </li>
+
+
+              <li>
+                <a href="#problem-discovery">Problem Discovery</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#user-needs">User Needs</a></li>
+                  <li><a href="#why-voice">Why Voice?</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#design">Design</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#thinking-boldly">Thinking Boldly</a></li>
+                  <li><a href="#happy-path">The Happy Path</a></li>
+                  <li><a href="#synonyms-combo-breakers">Synonyms & Combo-Breakers</a></li>
+                  <li><a href="#refining-interactions">Refining Interactions</a></li>
+                  <li><a href="#future-steps">Future Steps</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#reflections">Reflections</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#challenges">Challenges for Voice Interface Design</a></li>
+                  <li><a href="#principles">Unchanging Design Principles</a></li>
+                  <li><a href="#importance-user-testing">The Importance of User Testing</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+
+        <div class="bg bg-cookfresh" data-aos="fade-up" data-aos-duration="600" ></div>
+        <div class="jumbotron">
+          <div class="jumbotron-text">
+            <!-- <h1>Eatxplore</h1>
+            <p class="lead">Breaking the Cultural Barriers of Food.</p> -->
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+
+          <!-- <div data-aos="fade-up" data-aos-duration="600">
+            <h1 class="article-title">Cook Fresh</h1>
+
+            <p class="article-subtitle">Smart Cooking Assistant that Reduces Food Waste</p>
+            <hr>
+
+            <img src="../../assets/CookFresh-perspective.png" alt="Cook Fresh" class="img-responsive col-centered full-img">
+          </div> -->
+
+
+          <section id="overview" class="group first-section" data-aos="fade-up" data-aos-duration="600">
+              <h6>           </h6><br>
+
+          <!-- </section>
+        </div>
+
+        <img class="img-responsive full-img"src="../../assets/walker-problem-quote3.png" alt="problem">
+        <br><br><br>
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+          <section class="group"> -->
+
+              <h3>Overview</h3>
+              <hr>
+
+
+
+              <div class="row">
+
+                <div class="subgroup-left-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <p>This is a small exercise I explored with my friend Shengxi in order to learn the basics of designing Voice User Interfaces. We followed <a href="https://developer.amazon.com/designing-for-voice/design-process/">the process recommended by Amazon</a> to design the voice interaction.</p>
+
+                    <h4 id="problem">Problem</h4>
+                    <p>College students and young professionals, with their busy schedules, usually find cooking and organizing their fridges time-consuming. <span class="highlight highlight-cook-fresh">Some usually forget what they have in the fridge and end up wasting food; others hate spending time trying to figure out what to cook for each meal with the available ingredients</span>.</p>
+
+                    <h4 id="solution">Solution</h4>
+                    <p class="small-margin-bottom">We present Cook Fresh, an Alexa skill concept that enables Alexa to <span class="highlight highlight-cook-fresh">suggest recipes based on available ingredients in the fridge, remind users of expiring food, order missing ingredients from Amazon Fresh, and provide step-by-step cooking guidance</span>.</p>
+                    <p>Several products from <a href="https://www.engadget.com/2018/01/09/samsung-bixby-family-hub-3-fridge-hands-on/">Samsung</a> and <a href="https://www.engadget.com/2018/01/09/whirlpool-yummly-smart-kitchen/">Whirlpool</a> with similiar ideas were later presented at <a href="https://ces.tech/">CES 2018</a>, demonstrating the feasibility of our concept.</p>
+                </div>
+
+                <div class="subgroup-right-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <h4>My Role</h4>
+                  <p>Voice User Interface Designer, UX Designer</p>
+                  <h4>Timeline</h4>
+                  <p>Two Days (Dec. 7 - Dec. 8, 2017)</p>
+                  <h4>Team Members</h4>
+                  <p>Tony Jin, Shengxi Wu</p>
+                  <h4></h4>
+                  <h4>Tools</h4>
+                  <p>Sayspring (Voice Interface Prototyping Tool)</p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+
+              <!-- <div id="methods" class="subgroup">
+                  <h4>Our Approach</h4>
+                  <img class="img-responsive full-img" src="../../assets/walker-design-process.png" alt="">
+              </div> -->
+
+              <div id="my-role" class="subgroup">
+                  <h4>My Contribution</h4>
+                  <p class="small-margin-bottom"><span class="highlight highlight-cook-fresh">I came up with the initial design idea</span> and finalized it with the help of Shengxi. I <span class="highlight highlight-cook-fresh">conducted secondary research</span>, <span class="highlight highlight-cook-fresh">designed the end-to-end interaction flow</span>, and <span class="highlight highlight-cook-fresh">prototyped the product</span> in Sayspring.
+                  </p>
+              </div>
+
+              <div id="design-outcome" class="subgroup">
+                  <h4>Design Outcome</h4>
+                  <p>I no longer have access to my intial prototype in Sayspring since its acquisition by Adobe. I will create another prototype and provide its link soon. Please refer to the process below if you're interested in the design.</p>
+
+                  <p class="p-center-wrapper"><a href="#reflections" class="btn black-button" type="button" name="button">See What I Learned</button></a></p><br><br>
+                  <!-- <p>Our prototype in Sayspring can be viewed <a href="https://app.sayspring.com/projects/3a0f7c0f-627a-48e1-b49f-1aebe8a2269a/invitation/new">here</a>. However, you might need a Sayspring account in order to access it.</p> -->
+              </div>
+
+              <!-- <div class="subgroup">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row">
+                  <p class="p-center-wrapper"><a href="#prototype-small" class="btn black-button" type="button" name="button">Jump to Prototype</button></a></p><br><br>
+                </div>
+              </div> -->
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <section id="problem-discovery" class="group" data-aos="fade-up" data-aos-duration="600">
+            <h3>Problem Discovery</h3>
+            <hr>
+            <div id="user-needs" class="subgroup">
+              <h4>User Needs</h4>
+              <p>As in design for any other platforms, <span class="highlight highlight-cook-fresh">we started by talking with people</span>, identifying their problems, and delineating user needs. For this short design exercise, we quickly talked with people around us, and categorized their needs into three large categories: <span class="highlight highlight-cook-fresh">quickly get recipe suggestions based on available ingredients, reminders about food expiration, and hands-free cooking instructions.</span>
+
+              <img class="img-responsive full-image" src="../../assets/cookfresh-user-needs.png" alt="Happy Path">
+            </p>
+            </div>
+
+            <div id="why-voice" class="subgroup">
+              <h4>Why Voice?</h4><br>
+              <h5 class="cookfresh-h5">Voice is a Natural Way of Communication</h5>
+              <p>It is quick and intuitive for users to simply ask “what should I cook for dinner” instead of navigating through a graphical UI and learn how the information is structured. In this way, <span class="highlight highlight-cook-fresh">users won’t need to adapt to the technology and will get quick suggestions and instructions from the skill.</span></p>
+
+              <h5 class="cookfresh-h5">Voice User Interface Creates an Eyes and Hands-Free Experience</h5>
+              <p>Voice UI doesn’t require users to touch or look at any external device. <span class="highlight highlight-cook-fresh">This is especially helpful in the cooking context, in which users’ eyes and hands are occupied.</span></p>
+
+            </div>
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <section id="design" class="group" data-aos="fade-up" data-aos-duration="600">
+            <h3>Design</h3>
+            <hr>
+
+            <div id="thinking-boldly" class="subgroup">
+              <h4>Thinking Boldly</h4>
+              <p>Since the primary purpose of this exercise is to get familiar with Voice Interface design, <span class="highlight highlight-cook-fresh">we decided to think bold and imagine the future state of Voice Interface and Smart Home Technologies.</span><br><br>
+
+              <span class="highlight highlight-cook-fresh">One such assumption we made is that future smart fridges would be able to recognize what's in them, and whether the food/ingredients are about to expire.</span> This technology can be realized by adding a tag to each product we buy to encode information about product name & expiration date, or by using computer vision algorithms to detect products within the fridge and estimate whether they are about to expire. <a href="https://www.engadget.com/2018/01/09/whirlpool-yummly-smart-kitchen/" target="_blank">Similar ideas were later shown at CES 2018</a>, demonstrating the feasibility of our idea.
+
+              </p>
+            </div>
+
+            <div id="happy-path" class="subgroup">
+              <h4>The Happy Path</h4>
+              <p>We followed Amazon's VUI Design guidelines and started with designing "the Happy Path." For each of Cook Fresh's response, <span class="highlight highlight-cook-fresh">we referred back to the design guidelines to make sure that it sounds natural & concise, that it can provide enough information to successfully engage the user in a conversation, and that it can guide the user's response without explicitly telling him/her what to say.</span></p>
+
+              <img class="img-responsive full-image" src="../../assets/cookfresh-happy-path-1.png" alt="Happy Path"><br><br>
+
+            </div>
+
+            <div id="synonyms-combo-breakers" class="subgroup">
+              <h4>Synonyms & Combo-Breakers</h4>
+
+              <p>We then built on the happy path and started brainstorming how the users might respond differently from our planned path. To come up with all these possibilities, <span class="highlight highlight-cook-fresh">we conducted a role play with several of our friends to gather possible responses.</span> We then organized them into 2 groups according to Amazon's guideline, synonyms and combo-breakers. </p>
+
+              <h5 class="cookfresh-h5">Synonyms</h5>
+              <p>A lot of times, users will express the same ideas we expect without speaking the exact same words we have. Therefore, to create the prototype, we came up with synonyms for each input, and added them into our prototype.</p>
+              <img class="img-responsive full-image" src="../../assets/cookfresh-synonyms.png" alt="Synonyms"> <br><br>
+
+              <h5 class="cookfresh-h5">Combo-Breakers</h5>
+              <p>Other times, users might not strictly follow the happy path to answer the questions. <span class="highlight highlight-cook-fresh">They might reply with another question or come up with an option that is not expected.</span> Therefore, we listed a couple of such "combo-breakers" to enable our skill to switch context when necessary to maintain the conversation.</p>
+              <img class="img-responsive full-image" src="../../assets/cookfresh-combo-breakers.png" alt="Combo Breakers"> <br><br>
+
+              <p>These synonyms and combo-breakers are not exhaustive, nor were we able to incorporate every situation into our design. It was just a thought exercise that pushed us to think more about how to design for voice, with all the unexpected input from users.</p>
+            </div>
+
+            <div class="subgroup" id="refining-interactions">
+              <h4>Refining Interactions</h4>
+              <p>We then thought about different use cases based on the combo-breakers and our initial user needs. We refined our scenario by adding the following two paths:</p>
+              <img class="img-responsive full-image" src="../../assets/cookfresh-new-flows.png" alt="New Flows"> <br><br>
+              <p>Note that to enable the function of ordering missing ingredients, users will be required to link the skill to their Amazon Fresh account, and give the skill access to their mailing address. They might also need to manually select the ingredient they want the first time they use this function, so that Cook Fresh can remember their preference and order the same ingredient the next time it is needed.</p>
+            </div>
+
+            <div class="subgroup" id="future-steps">
+              <h4>Future Steps</h4>
+              <p>I couldn't do everything within the short time that I finished this exercise. There are a lot more things to consider and explore if I had more time.</p>
+
+              <h5 class="cookfresh-h5">First Use Experience</h5>
+              <p><span class="highlight highlight-cook-fresh">A lot of the interactions we prototyped are based on the assumption that users have already gone through the onboarding process and have linked their smart fridge and their Amazon account with the skill.</span> That experience, whether it be through voice or through the Alexa app, requires further work. The initial set up experience should also inform the users about what the skill is capable of doing.</p>
+
+              <h5 class="cookfresh-h5">Personalized Experience for Long-Term Users</h5>
+              <p>One feature we prototyped earlier was directly helping users order an ingredient on Amazon Fresh and have it delivered to the user's address. By learning the user's preference over time, we are able to help users make such orders without having to confirm with them about their preferences every time. <span class="highlight highlight-cook-fresh">For long-term users, Cook Fresh should be able to learn a lot about their dietary preferences over time, and provide experience tailored to these preferences (e.g. what recipes to recommend at what time, what ingredients to order).</span> I'll still need to work out these details if I had more time.</p>
+
+              <h5 class="cookfresh-h5">User Testing</h5>
+              <p>Though we brought our prototype to some users to help us refine our design, more comprehensive user testing sessions are required to validate whether the design helps better solve our users' problems, and whether the interaction makes sense for a variety of users in different contexts.</p>
+            </div>
+
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <section id="reflections" class="group" data-aos="fade-up" data-aos-duration="600">
+            <h3>Reflections</h3>
+            <hr>
+
+
+
+            <div class="subgroup" id="challenges">
+              <h4>Challenges for Voice Interface Design</h4>
+              <p>The reason why I started this exercise and enjoyed it so much is that there are unique challenges in VUI design that pushed me to think more about how to compensate for the limitations of voice communication through design. These challenges include:</p>
+
+              <h5 class="cookfresh-h5">High Expectations from Users & Technical Constraints</h5>
+              <p>Voice is a natural form of interaction for people; it makes sense for them to learn to use a GUI, but they'll be frustrated if they're forced to learn how to talk. <span class="highlight highlight-cook-fresh">While users expect to talk freely with a digital assistant, current technologies do not support such free conversations</span>--it is still hard for computers to understand the context and come up with an answer that always matches the user's expectations in a truly free conversation. Therefore, <span class="highlight highlight-cook-fresh">it is up to the designer to structure the digital assistant's words to elicit certain types of responses from the users that's easy to process technically, without explicitly telling the users what to do.</span></p>
+
+              <h5 class="cookfresh-h5">Non-Linear Interactions</h5>
+              <p>GUI interactions are mostly linear; users need to navigate through a certain path in order to get to where they need to be. Voice interfaces, on the other hand, cannot and should not provide such constraints. <span class="highlight highlight-cook-fresh">Therefore, designers need to think about different responses and combo-breakers users might provide, and let the digital assistant be flexible given the user input.</span></p>
+
+              <h5 class="cookfresh-h5">Voice Contains Less Information</h5>
+              <p>Human beings are able to process less auditory information compared to visual information. People can quickly browse through a list and choose an item, but if they listen to a list, they need to listen to the items one by one, and will likely forget about the  previous information by the end. <span class="highlight highlight-cook-fresh">Therefore, when designing for voice, designers need to provide only the most necessary information at the moment, and let users to take their turn to make a choice, or to request further information.</span></p>
+
+            </div>
+
+            <div class="subgroup" id="principles">
+              <h4>Unchanging Design Principles</h4>
+              <p>Despite all the differences between VUI design and GUI design, I was able to find common design principles that apply to both. For example, in both cases, <span class="highlight highlight-cook-fresh">designers need to provide just enough information to avoid information overload; we need to provide constraints to guide users through a certain path; we need to focus on the tasks users are trying to accomplish, think about their context, their needs, and provide solutions that best suit their needs within the context.</span> Though the nature of different media & technologies requires us to pay special attention to certain principles (e.g. people can process much less auditory information compared to visual information, so we need to be even more concise when designing for audio), the underlying principles remain the same.</p>
+            </div>
+
+            <div class="subgroup" id="importance-user-testing">
+              <h4>The Importance of User Testing</h4>
+              <p>User testing seems to be even more important when designing for voice. <span class="highlight highlight-cook-fresh">Since voice interactions are more natural for users, there are simply more possiblities that users will not follow our predefined happy path and say something totally unexpected.</span> As designers, it is crucial for us to test our dialog flows with our users to discover all those different possibilities and try to incorporate them into the design.</p>
+            </div>
+
+          </section>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+    <div class="container-fluid">
+      <div class="row footer-row">
+        <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a class="hvr-underline-from-left" href="../home.html#my-work" >All</a> /
+            <a class="hvr-underline-from-left" href="./eatxplore.html">Eatxplore</a> /
+            <a class="hvr-underline-from-left" href="./photos.html">Google Photos Redesign</a> /
+            <a class="hvr-underline-from-left" href="./mirror-mirror.html">Mirror Mirror</a> /
+            <a class="hvr-underline-from-left" href="./THD.html">My Home Depot Internship</a> /
+            <a class="selected-footer" href="./cook-fresh.html" >Cook Fresh</a> /
+            <a class="hvr-underline-from-left" href="./up-up.html" >Up & Up</a> /
+            <a class="hvr-underline-from-left" href="./rei-backpack.html" >REI Backpack Finder</a> /
+            <a class="hvr-underline-from-left" href="./thriller.html" >The Resurrected</a>
+          </p>
+          <br>
+          <br>
+          <p class="footer-text">Designed and Handcoded with ♥ and ♫</p>
+        </div>
+        <div class="footer-icons col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a href="https://dribbble.com/yanfengjin" target="_blank"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/yanfeng-jin-tony-80533455/" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@yanfengjin" target="_blank"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+            <a href="mailto:yjin@gatech.edu" target="_blank"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a>
+          </p>
+          <br>
+          <p class="footer-text-small">Tony Yanfeng Jin © 2017-2018 All Rights Reserved</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+</html>

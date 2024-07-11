@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111016994-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111016994-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
+    <title>REI Backpack Finder | Yanfeng Jin (Tony)</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="shortcut icon" type="image/x-icon" href="../../assets/icon-tab.ico">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel = "stylesheet" type = "text/css" href = "../../css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "../../css/fonts.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/icon-tab.ico">
+    <!-- <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet"> -->
+
+    <link href="../../css/zoom.css" rel="stylesheet">
+    <script src="../../js/transition.js"></script>
+    <script src="../../js/zoom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://use.fontawesome.com/a891bb0a11.js"></script>
+    <script src="../../js/script.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("1409449789");
+    </script>
+
+  </head>
+
+  <body>
+    <div class="spinner-wrapper">
+      <div class="p-center-wrapper">
+        <div class="la-line-scale la-dark">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <h4 id="preloader-title"></h4>
+            <h5 id="preloader-content"></h5>
+        </div>
+
+      </div>
+
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-nav">
+          <span class="sr-only">切换导航</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../home.html">Tony Jin</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="collapsible-nav">
+        <ul class="nav navbar-nav">
+          <li><a class="selected hvr-underline-from-left" href="../home.html#my-work">Projects</a></li>
+          <li><a class="hvr-underline-from-left" href="../../assets/Yanfeng-Jin-Resume-v8.3.pdf" target="_blank">Resume</a></li>
+          <li><a class="hvr-underline-from-left" href="https://medium.com/@yanfengjin" target="_blank">Writings</a></li>
+          <li><a class="hvr-underline-from-left" href="../about-me.html">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 50px">
+        <nav class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <div class="bs-docs-sidebar">
+            <ul class="nav nav-stacked"id="sidebar">
+
+              <li>
+                <a href="#overview">Overview</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#problem">Problem</a></li>
+                  <li><a href="#solution">Solution</a></li>
+                  <li><a href="#methods">Our Approach</a></li>
+                  <li><a href="#my-role">My Contribution</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#research">Research</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#field-visits">Field Visits</a></li>
+                  <li><a href="#task-analysis">Task Analysis</a></li>
+                  <li><a href="#interviews">Interviews & Affinity Mapping</a></li>
+                  <li><a href="#survey">Detailed Online Survey</a></li>
+                  <li><a href="#summary-research">Additional Research</a></li>
+                  <li><a href="#persona">Persona</a></li>
+                  <li><a href="#journey-mapping">Journey Mapping</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#design">Design</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#ideation">Ideation</a></li>
+                  <li><a href="#design-alt">Design Alternatives</a></li>
+                  <li><a href="#user-feedback">User Feedback</a></li>
+                  <li><a href="#wireframes">Wireframes</a></li>
+                  <li><a href="#prototype">Prototype</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#evaluate">Evaluate</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#cog-walkthrough">Cognitive Walkthrough</a></li>
+                  <li><a href="#usability">Usability Testing</a></li>
+                  <li><a href="#iterations">Design Iterations</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+
+        <div class="bg bg-REI" data-aos="fade-up" data-aos-duration="600"></div>
+        <div class="jumbotron">
+          <div class="jumbotron-text">
+            <!-- <h1>Eatxplore</h1>
+            <p class="lead">Breaking the Cultural Barriers of Food.</p> -->
+          </div>
+        </div>
+
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+          <!-- <div data-aos="fade-up" data-aos-duration="600">
+            <h1 class="article-title">REI Backpack Finder</h1>
+            <p class="article-subtitle">Helping novice backpackers find the perfect backpack</p>
+            <hr>
+            <img src="../../assets/REI-perspective.png" alt="REI Online Backpack Purchasing Experience" class="img-responsive col-centered full-img">
+          </div> -->
+
+
+          <section id="overview" class="group first-section">
+              <h6>           </h6><br>
+              <h3>Overview</h3>
+              <hr>
+              <div class="row">
+                <div id="problem" class="subgroup-left-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <h4>Problem</h4>
+                    <p><span class="highlight highlight-REI">Novice backpackers have a hard time finding multi-day backpacks with the right features, capacity and fit</span>. A single mistake during the purchase might end up affecting the health and even safety of the backpacker during an extended trip in wilderness.</p>
+
+                    <h4 id="solution">Solution</h4>
+                    <p>We redesigned REI's website to <span class="highlight highlight-REI">provide more detailed guidance and support for novice backpackers</span> to find the backpack of the right size, capacity, and features without having to travel to an REI store.</p>
+
+                </div>
+
+                <div class="subgroup-right-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <h4>My Role</h4>
+                  <p>UX Researcher, UX Designer</p>
+                  <h4>Timeline</h4>
+                  <p>Sept. 2017 - Dec. 2017 </p>
+                  <h4>Team Members</h4>
+                  <p>Tony Jin, Xinyi Chen, Lindsay Kelly, Brianna Pritchett, Xue Zhao</p>
+                  <h4></h4>
+                  <h4>Tools</h4>
+                  <p>Qualtrics, Sketch, InVision</p>
+                  <br>
+                  <br>
+                </div>
+              </div>
+
+
+
+              <div id="methods" class="subgroup">
+                <h4>Our Approach</h4>
+                <img class="img-responsive full-img" src="../../assets/REI-design-process.png" alt="">
+              </div>
+
+
+
+              <div id="my-role" class="subgroup">
+                  <h4>My Contribution</h4>
+                  <p>During the research phase, I contacted local REI stores for interview permissions. After the first store declined our request, <span class="highlight highlight-REI">my perseverance helped us discover alternative choices and more opportunities for interviews.</span> I visited different REI stores for observations and interviews, and conducted a task analysis based on the data collected. I also took the lead to design and distribute a detailed online survey that yielded <span class="highlight highlight-REI">hundreds of responses with rich qualitative data.</span> I then <span class="highlight highlight-REI">analyzed the survey data</span> and helped create affinity diagrams. With the help of my teammate Lindsay, I  <span class="highlight highlight-REI">created a customer journey map</span> based on the data we gathered. <br><br>
+
+                  Generated in the ideation phase, my ideas of providing guidance through an interactive survey and community-based expert support were both refined and incorporated into our final design. <br><br>
+
+                  In addition, I <span class="highlight highlight-REI">created two versions of interactive prototypes in InVision</span> for two rounds of user testing. I synthesized users' feedback from both rounds, developed design implications, and <span class="highlight highlight-REI">created the final User Interface using Sketch.</span> I also moderated several cognitive walkthrough and usability testing sessions.
+                  </p>
+              </div>
+
+              <div id="design-outcome" class="subgroup">
+                <h4>Design Outcome</h4>
+              </div>
+
+          </section>
+        </div>
+        <img class="img-responsive full-screen-img" src="../../assets/REI-design-outcome.png" alt="Design Outcome"><br><br>
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+          <section class="group">
+            <div class="subgroup">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row">
+                  <p style="text-align:center;"><a href="#iterations" class="btn black-button" type="button" name="REI button">Jump to Final Design</button></a></p><br><br>
+              </div>
+            </div>
+
+          </section>
+
+          <div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <section id="research" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>Research</h3>
+              <hr>
+              <div class="subgroup">
+                <p>Through a series of primary research detailed below, including field observations, interviews and surveys, we decided to focus on <span class="highlight highlight-REI">novice backpacker's pack purchasing experience on REI's website.</span></p>
+              </div>
+
+              <div id="field-visits" class="subgroup">
+                  <h4>Field Visits</h4>
+                  <p>We first visited a local REI store several times to understand the general store layout, observe people's purchasing process, and identify the need we hope to address. <span class="highlight highlight-REI">We pivoted from focusing on tents to focusing on backpacks because there was generally a higher demand for help in the backpack area.</span>  <br><br>
+                  <img class="img-responsive full-img"src="../../assets/REI-observation-1.png" alt="Observations at REI"> <br>
+                  I took the lead to come up with a scenario in which I needed to buy a multi-day backpacking pack for a 3-day trip in wilderness. <span class="highlight highlight-REI">I went through the entire backpack selection process in-store and interacted with salespeople with the objective dictated by the scenario in mind.</span> The information gathered helped us create the task analysis for in-store backpack purchase. <br><br>
+                  <img class="img-responsive full-img"src="../../assets/REI-observation-2.png" alt="Observations at REI"> <br>
+
+                  During our visits, <span class="highlight highlight-REI">I also took the lead to talk with the store's manager for interview permissions.</span> Though he had to decline our request, the manager pointed us to REI backpacking classes taught at another store, which graciously agreed to our interview request later.</p>
+              </div>
+              <div id="task-analysis" class="subgroup">
+                  <h4>Task Analysis</h4>
+                  <p>Based on the data we collected through field visits and the exploration of REI's website/app, we created a task analysis for each context to better understand our users' pain points when purchasing a backpack through different channels. Here is a summary of the analysis: </p>
+              </div>
+            </section>
+          </div>
+          <img class="img-responsive large-img" src="../../assets/REI-task-analysis.png" alt="Task analysis">
+          <br><br>
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+              <div class="subgroup">
+              </div>
+
+              <div id="interviews" class="subgroup">
+                <h4>Interviews & Affinity Mapping</h4>
+                <p>To better understand novice backpackers' current experience purchasing backpacks, we <span class="highlight highlight-REI">attended REI's lightweight backpacking class</span>, and conducted <span class="highlight highlight-REI">short, semi-structured interviews with REI's customers and salespersons.</span></p>
+
+                <img class="img-responsive full-img"src="../../assets/REI-interviews.png" alt="Lightweight backpacking class & interview notes"><br><br>
+
+                <p>
+                We also interviewed <span class="highlight highlight-REI">a non-REI backpacking expert</span> to learn about the best practices in the backpacking community that novice backpackers might not be aware of.</p>
+
+                <img class="img-responsive full-img"src="../../assets/REI-affinity-1.png" alt="Lightweight backpacking class & interview notes"><br><br>
+
+                <p class="small-margin-bottom">
+                We synthesized our results using affinity mapping and gained the following insights:
+                </p>
+
+                <ul>
+                  <li><span class="highlight highlight-REI">Fit</span> is the most important factor to consider when purchasing a backpack; a backpack that fits poorly can cause discomfort and potentially injury.</li>
+                  <li>Novice backpackers usually <span class="highlight highlight-REI">don't know what to consider</span> when selecting a backpack.</li>
+                  <li>Backpackers form a <span class="highlight highlight-REI">tight community</span> and are usually willing to help each other.</li>
+                  <li>There are a couple of questions that all REI salespersons are trained to ask in order to help their customers find the right backpack model.</li>
+                  <li><span class="highlight highlight-REI">The in-store purchasing experience has few room for improvement,</span> because almost all REI customers believe that REI's salespersons are well-trained and usually actively help them answer their questions. </li>
+                  <li><span class="highlight highlight-REI">People are generally reluctant to make large purchases like buying backpacks on mobile apps.</span> Such purchases require careful research beforehand, and people generally do not use mobile phones to conduct the research. </li>
+                </ul>
+
+                <p>As a result, we decided to focus on <span class="highlight highlight-REI">REI's website</span> as our point of intervention, since this context has the largest potential for improvement.</p>
+              </div>
+
+              <div id="survey" class="subgroup">
+                <h4>Detailed Online Survey</h4>
+                <p>After our decision to focus on REI's website, <span class="highlight highlight-REI">I designed and deployed a detailed survey on people's backpack purchasing experience on REI's website</span>. Through the survey, we hope to learn more about the user demographics, what they look for when shopping for backpacks online, what their pain points are throughout the process, what they think REI's website is currently lacking, etc.</p>
+
+                <img class="img-responsive full-img"src="../../assets/REI-survey.png" alt="Survey Results Example"><br><br>
+
+                <p class="small-margin-bottom">Our main findings in the survey include: </p>
+                <ul>
+                  <li>Most users (around 70%) are between the age of 25 and 34.</li>
+                  <li>Some users complete the entire process online, while others typically conduct online research first, before going in store to look and feel the physical products.</li>
+                  <li>Users generally find REI's online expert advice articles to be <span class="highlight highlight-REI">inaccurate and outdated</span>.</li>
+                  <li>Users need <span class="highlight highlight-REI">more personalized advice from others in the backpacking community.</span></li>
+                </ul>
+              <p>The survey, which received nearly 300 responses, also provided us with rich data for our persona creation, which is detailed below.</p>
+              </div>
+
+
+              <div id="summary-research" class="subgroup">
+                <h4>Additional Research</h4>
+                <p>In addition to interviews and surveys, our group also conducted <span class="highlight highlight-REI">contextual inquiries</span>, <span class="highlight highlight-REI">online research of the user group (backpackers)</span>, and <span class="highlight highlight-REI">analyses of frequently asked questions on REI's website</span>. We analyzed our results using affinity mapping.
+                </p>
+
+                <img class="img-responsive full-img"src="../../assets/REI-affinity-2.jpg" alt="Affinity mapping"><br><br>
+
+                <p class="small-margin-bottom">We discovered that novice backpackers generally need help in the following areas:</p>
+
+                <ul>
+                  <li><span class="highlight highlight-REI">Capacity: </span>It is hard for novice backpackers to determine the capacity of their backpacks, which is highly dependent on what they bring and the length of their trips.</li>
+
+                  <li><span class="highlight highlight-REI">Weight: </span>Novice backpackers tend to <span class="highlight highlight-REI">overestimate</span> how much they'll need for their trip. However, backpacking experts have repeatedly mentioned that one should always try to minimize the total weight of one's backpack.</li>
+
+                  <li><span class="highlight highlight-REI">Fit: </span>Without trying on the backpacks in store, it is extremely hard for novice backpackers to find a pack that fits well with their body. However, fit is <span class="highlight highlight-REI">the most important factor to consider</span> when buying packs for multi-day backpacking treks. </li>
+                </ul>
+
+                <p class="small-margin-bottom">When they need help, novice backpackers usually resort to the following resources:</p>
+
+                <ul>
+                  <li><span class="highlight highlight-REI">REI Experts: </span>Novice backpackers consistently report that in-store REI experts are extremely helpful and knowledgeable. <span class="highlight highlight-REI">However, the online expert advice provided by REI is perceived as static and outdated, which needs to be improved</span>.</li>
+
+                  <li><span class="highlight highlight-REI">Experience Backpackers from the Community: </span>Our research shows that backpackers form a very social and community-oriented group. Most of them enjoy helping fellow backpackers, even strangers. Novice backpackers usually get advice from more experience backpackers they meet, either in person or on backpacking forums and Facebook groups.</li>
+                </ul>
+
+
+
+
+              </div>
+
+              <div id="persona" class="subgroup">
+                <h4>Persona</h4>
+                <p>We created the following personas based on the data we gathered in our interviews and surveys. Since we decided to focus on redesigning REI's website, we created two personas who shop either exclusively online, or both online and in store.</p>
+                <img class="img-responsive full-img"src="../../assets/REI-persona-1.png" alt="Persona - Carrie"><br><br>
+                <img class="img-responsive full-img"src="../../assets/REI-persona-2.png" alt="Persona - Ben"> <br><br>
+
+                <p>Since we focus on REI's online experience, we also created <span class="highlight highlight-REI">an anti-persona</span> who shops exclusively in store to make sure that we do not design for this group of users.</p>
+                <img class="img-responsive full-img"src="../../assets/REI-persona-3.png" alt="Persona - Irene"><br><br>
+              </div>
+
+              <div id="journey-mapping" class="subgroup">
+                <h4>Journey Mapping</h4>
+              </div>
+            </section>
+          </div>
+
+
+          <img class="img-responsive large-img"src="../../assets/REI-journey-1.png" alt="Customer Journey-1"><br><br>
+
+          <img class="img-responsive large-img"src="../../assets/REI-journey-2.png" alt="Customer Journey-2"><br><br>
+
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+              <div class="subgroup">
+
+              </div>
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="design" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>Design</h3>
+              <hr>
+
+              <div id="ideation" class="subgroup">
+                <h4>Ideation</h4>
+                <p>In order to encourage divergent and creative thinking, we decided to <span class="highlight highlight-REI">sketch out design ideas individually before coming together and presenting our ideas to the group</span>. Each group member referred back to the user needs we identified in the research stage to make sure that the solutions we came up with addressed at least part of our users' needs. Below are some of our individual sketches.
+                </p>
+
+                <img class="img-responsive full-img"src="../../assets/REI-sketches.png" alt="sketches"> <br><br>
+
+
+              </div>
+
+              <div id="design-alt" class="subgroup">
+                <h4>Design Alternatives</h4>
+                <p>As a group, we merged our ideas into the following 3 design concepts:
+                </p>
+                <h5>Concept 1</h5>
+                <p>In our first concept, we provide novice backpackers with <span class="highlight highlight-REI">a traditional survey</span> which asks questions that would otherwise be asked by salespersons in REI's stores. After answering these questions, users will see a list of recommended backpacks that are suitable for their needs. They will also see a list of recommended features for them, and whether each recommended backpack has those features. <span class="highlight highlight-REI">This concept allows users to better understand and effectively find which backpacks will be the right fit for them, considering their size, weight, body frame and all of the items they will be carrying in their backpack.</span></p>
+
+                <img class="img-responsive full-img"src="../../assets/REI-concept-1.png" alt="Concept 1"> <br><br>
+
+                <h5>Concept 2</h5>
+                <p>Concept 2 provides users with <span class="highlight highlight-REI">an interactive video</span> in which a qualified expert from REI talks about his backpacking experience. In the video, the expert will ask the same questions salespersons ask in an REI store, give tips to users on how to measure their bodies, and educate them what they should do to prepare for their specific trips. This concept could not only help novice backpackers narrow down their choices, <span class="highlight highlight-REI">but also educate them what they should consider while choosing a backpack.</span></p>
+
+                <img class="img-responsive full-img"src="../../assets/REI-concept-2.png" alt="Concept 2"> <br><br>
+
+                <h5>Concept 3</h5>
+                <p>Since research shows that backpackers usually form a close community, <span class="highlight highlight-REI">our third concept aims to bring the community together and let more experienced backpackers help novice backpackers with their purchase decisions.</span> We provide a "Chat with Expert" function that enables users to email/chat with either REI salespersons or experienced backpackers online who have agreed to give advice to novice backpackers on REI's site. In the expert list, users are able to see the ratings of each expert, their specialties, and their experiences. <span class="highlight highlight-REI">This concept provides a platform for novice backpackers to reach out to experienced backpackers, learn from them, and find the right backpack more efficiently.</span></p>
+
+                <img class="img-responsive full-img"src="../../assets/REI-concept-3.png" alt="Concept 3"> <br><br>
+
+
+              </div>
+
+              <div id="user-feedback" class="subgroup">
+                <h4>User Feedback</h4>
+                <p class="small-margin-bottom">In order to narrow down our ideas, we conducted 7 feedback sessions with novice backpackers to see their preferences. We found that:
+                </p>
+
+                <ul>
+                  <li><span class="highlight highlight-REI">Users generally prefer the survey tool (Concept 1)</span> over the video tutorial (Concept 2), because the survey enables them to skip parts and does not require audio output.</li>
+
+                  <li>However, a number of users liked the <span class="highlight highlight-REI">personal elements</span> of having the instructions narrated by Ned (an illustrative REI expert).</li>
+
+                  <li>Users also reported that <span class="highlight highlight-REI">they will use the expert advice tool</span>, and hope to have access to it <span class="highlight highlight-REI">at any stage of the process.</span></li>
+                </ul>
+
+                <p class="small-margin-bottom">Based on the data, we made the following design decisions:</p>
+                <ul>
+                  <li><span class="highlight highlight-REI">Use an interactive survey</span> as the main feature to help users narrow down their options.
+
+                  <li><span class="highlight highlight-REI">Incorporate more personal features that users liked into the survey design </span>(e.g. describing why each question is asked and narrating the instructions through the voice of Ned the expert). </li>
+
+                  <li><span class="highlight highlight-REI">Create an expert advice tool</span> to connect novice backpackers with REI salespersons as well as experts from the greater backpacking community.</li>
+
+                  <li><span class="highlight highlight-REI">Allow users to access the expert advice tool anytime during the process</span>.</li>
+                </ul>
+
+              </div>
+
+              <div id="wireframes" class="subgroup">
+                <h4>Wireframes</h4>
+                <p>We created the following wireframes as a group in order to illustrate the basic functionalities of our final design. <span class="highlight highlight-REI">The emphasis at this stage is still on functionalities rather than visual design</span>, since we hope to make sure that our final design meets users' needs before refining the interface.</p>
+              </div>
+            </section>
+          </div>
+
+          <img class="img-responsive large-img"src="../../assets/REI-wireframes.png" alt="annotated wireframes"> <br><br>
+
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+              <div class="subgroup">
+
+                <p><span class="highlight highlight-REI">To evaluate our prototype, we created the following task scenario for our users:</span></p>
+
+                <p style="font-weight:100;font-style: italic;text-align:center;padding-left:30px;padding-right:30px;">
+                  You are going to Smoky Mountain for a week-long backpacking trip and need to find a suitable backpack for the adventure. You will be travelling with your significant other, carrying a 2-person tent, a sleeping bag, but no sleeping mat or cooking gear. Please use the tool to narrow down your choices and seek advice from an expert to confirm the backpack capacity.</p>
+
+                <p>During each evaluation session, we first showed users the current REI website, asked them several screening questions to make sure that they are novice backpackers, and explained to them the task scenario. After users completed the tasks, we asked them several follow up questions and encouraged them to provide feedback on the design.</p>
+
+                <p>Based on users' feedback, I created the following <span class="highlight highlight-REI">design recommendations</span> for our medium-fidelity prototype.</p>
+
+              </div>
+            </section>
+          </div>
+
+          <img class="img-responsive large-img"src="../../assets/REI-annotated-wireframes.png" alt="annotated wireframes"> <br><br>
+
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+
+              <div class="subgroup">
+              </div>
+
+              <div id="prototype" class="subgroup">
+                <h4>Prototype</h4>
+                <p>After we designed the user interface, <span class="highlight highlight-REI">I took the lead to create an interactive prototype of our tool in InVision.</span> Click to view the <a href="http://invis.io/4FEKD202S"><span class="highlight highlight-REI"><em>InVision prototype</em></span></a>. </p>
+              </div>
+            </section>
+          </div>
+
+          <img class="img-responsive large-img"src="../../assets/REI-UI-all.png" alt="UI"> <br><br>
+
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+            </section>
+
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+
+            <section id="evaluate" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>Evaluate</h3>
+              <hr>
+
+
+              <div id="cog-walkthrough" class="subgroup">
+                <h4>Cognitive Walkthrough</h4>
+                <p class="small-margin-bottom">To evaluate the user flow of our app, we conducted several cognitive walkthrough sessions with usability experts. Our tool leads our users through a linear process to help them narrow down their choices. Though our process resembles REI salespersons' process in helping novice backpackers in store, <span class="highlight highlight-REI">we hope to make sure that the user flow, when translated into a digital survey, is intuitive and easy to follow</span>. <br><br>
+
+                During each session, we first provide our usability experts with the context of our design and a backpack purchasing task to guide their evaluation. We then show them the interface and walk them through the tool step by step. During each step, we let them write down answers to all the following questions, together with explanations supporting the answers:
+                </p>
+                <ul>
+                  <li>Is this what you expected to see?</li>
+                  <li>Are you making progress towards your goal?</li>
+                  <li>What would your next action be?</li>
+                  <li>What do you expect to see next?</li>
+                </ul>
+
+                <p class="small-margin-bottom">Some of the feedback we got from usability experts include:</p>
+                <ul>
+                  <li>This progress bar is <span class="highlight highlight-REI">not visible enough.</span></li>
+                  <li>The "prev/next" buttons are <span class="highlight highlight-REI">not visible enough.</span></li>
+                  <li><span class="highlight highlight-REI">The users might not know that they are making progress</span> towards the end goal until the last page, when they see the recommendations; they might give up halfway as a result.</li>
+                  <li>The "Try-on for free" function on the recommendations page <span class="highlight highlight-REI">is not visible.</span></li>
+                </ul>
+              </div>
+
+              <div id="usability" class="subgroup">
+                <h4>Usability Testing</h4>
+                <p>Similar to our earlier user feedback sessions, we conducted several <span class="highlight highlight-REI">in-person, moderated usability testing sessions</span> with potential users. After showiung users the current REI website and make sure that they are novice backpackers, we read them the following task:</p>
+
+                <p style="font-style:italic;text-align:center;padding-left:30px;padding-right:30px;">
+                  Find a backpack for a trip to Smoky Mountain for 5 days for yourself. You will be travelling with your significant other and carrying 1 tent, 2 sleeping bags, 2 sleeping mats, and 1 stove. Ask an expert for help along the way. Also, please share your thoughts and any questions you may have as you look for your backpack. Finally, we are not evaluating you, but rather seeking feedback to improve our solution.</p>
+
+                <p>Users then completed the task while <span class="highlight highlight-REI">thinking aloud</span>. Following the task, we asked them whether they would use the tool in place of in-store shopping, and let them fill in the System Usability Scale (SUS).</p>
+
+                <p class="small-margin-bottom">Overall, our design received <span class="highlight highlight-REI">an average SUS score of 77</span> (SD = 23.48). In fact, the mean was greatly affected by one outlier with an extremely low score; all the other users rated the system as highly usable. A larger sample size is needed to get a more accurate estimation of the system's usability, but <span class="highlight highlight-REI">a SUS score of 77 assures us that our system is considered usable by most of our audience</span>.<br><br>
+
+                Other feedback/take-aways from the usability studies include:
+                </p>
+                <ul>
+                  <li><span class="highlight highlight-REI">The instruction videos on the Body Fit page were not noticed</span> by a number of users.</li>
+                  <li><span class="highlight highlight-REI">The continuous scale for estimated weight/capacity confused a number of users</span>.</li>
+                  <li>Several users did not understand what "Your Backpack" meant on the Weight Estimation page.</li>
+                  <li>Instead of selecting a backpack as their final choice, <span class="highlight highlight-REI">users hope to either view details of backpacks they are interested in, or compare several backpacks</span> on the Recommendations page.</li>
+                </ul>
+              </div>
+
+              <div id="iterations" class="subgroup">
+                <h4>Design Iterations</h4>
+
+                <p><em>Note: an interactive prototype of the final design will be available soon. The main UI screens can be found below.</em> <br><br>
+
+                Based on the results gather from cognitive walkthrough and usability testing sessions, <span class="highlight highlight-REI">I created the final design of our tool using Sketch.</span> The design changes I made are illustrated below.
+                </p>
+                <h5>Landing Page</h5>
+                <p class="small-margin-bottom">On the landing page, I left only one entry point to the tool through the call-to-action button to minimize confusion. I also changed the icon for the voice interface we hope to provide for the visually impaired.</p>
+              </div>
+            </section>
+          </div>
+
+          <img class="img-responsive large-img"src="../../assets/REI-iteration-1.png" alt="Designed changes made 1"> <br><br><br>
+
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+              <div class="subgroup">
+                <h5>Trip Length</h5>
+                <p class="small-margin-bottom">For the trip length page, I changed the wording of the third button to make the meaning of the option clear. I also made the following changes to the general layout, <span class="highlight highlight-REI">which appear on all the following pages as well</span>:</p>
+                <ul>
+                  <li>Placed the explanation on why the tool asks each question under the respective question. The original layout placed the explanation above the progress bar, which was hard to notice.</li>
+                  <li>Changed the progress bar to make it clear which sections have been completed.</li>
+                  <li>Always show available filters and candidate backpacks on the page; gradually narrow the choices down as more filters are suggested based on the user's input.</li>
+                  <li>Changed the navigation (Previous/Next question buttons) for it to be more prominent.</li>
+                  <li>Increased the font size for the expert tool.</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <img class="img-responsive large-img"src="../../assets/REI-iteration-2.png" alt="Designed changes made 2"> <br><br><br>
+
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+              <div class="subgroup">
+                <h5>Body Fit</h5>
+                <p>Some users did not realize that the videos were playable. Therefore, <span class="highlight highlight-REI">I added more prominent titles for each video and made it clear that users can click to play the video instructions</span>. I also added suggested filters earlier in the process (though without all the information it can be inaccurate) and changed the candidate backpacks once users finish answering one question to <span class="highlight highlight-REI">let them see the progress they make towards their goal</span>.</p>
+              </div>
+            </section>
+          </div>
+
+          <img class="img-responsive large-img"src="../../assets/REI-iteration-3.png" alt="Designed changes made 3"> <br><br><br>
+
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+              <div class="subgroup">
+                <h5>Weight & Capacity</h5>
+                <p class="small-margin-bottom">Changes to this section's design include:</p>
+                <ul>
+                  <li>Changed the title of the section to better reflect what we are estimating (weight and capacity, not weight alone). </li>
+                  <li>Made it clear through description that <span class="highlight highlight-REI">the estimated weight is the total weight of the backpack with all the gears inside</span>.</li>
+                  <li>Abandoned the continuous scale for weight estimation, which confused a lot of users. <span class="highlight highlight-REI">Replaced it with discrete categories</span>.</li>
+                  <li>Changed each category's capacity range for them to be <span class="highlight highlight-REI">consistent with REI's filters</span>.</li>
+                  <li><span class="highlight highlight-REI">Enabled users to carry half a tent</span> and share the weight with others, which was not taken into consideration in our original design.</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <img class="img-responsive large-img"src="../../assets/REI-iteration-4.png" alt="Designed changes made 4"> <br><br><br>
+
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+              <div class="subgroup">
+                <h5>Recommendations</h5>
+                <p class="small-margin-bottom">Changes to this section's design include:</p>
+                <ul>
+                  <li>Changed the ambiguous wording of the "Select" buttons to "Learn More".</li>
+                  <li>Enable users to <span class="highlight highlight-REI">directly select backpacks to compare</span> on this page.</li>
+                  <li>Added a call-to-action button to <span class="highlight highlight-REI">let users notice their option to try out 3 backpacks at home and return 2 of them for free</span>.</li>
+                  <li>Changed the "Why We Recommend" section for each backpack to <span class="highlight highlight-REI">make it easier to read and more realistic</span>.</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <img class="img-responsive large-img"src="../../assets/REI-iteration-5.png" alt="Designed changes made 5"> <br><br><br>
+
+          <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered  main-content">
+            <section class="group">
+
+              <!-- We can follow up on more ways to determine fit - personalized fit comment on each product's page; also a card that accompanies the user throughout their sessions on website -->
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+    <div class="container-fluid">
+      <div class="row footer-row">
+        <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a class="hvr-underline-from-left" href="../home.html#my-work" >All</a> /
+            <a class="hvr-underline-from-left" href="./eatxplore.html">Eatxplore</a> /
+            <a class="hvr-underline-from-left" href="./photos.html">Google Photos Redesign</a> /
+            <a class="hvr-underline-from-left" href="./mirror-mirror.html">Mirror Mirror</a> /
+            <a class="hvr-underline-from-left" href="./THD.html">My Home Depot Internship</a> /
+            <a class="hvr-underline-from-left" href="./cook-fresh.html" >Cook Fresh</a> /
+            <a class="hvr-underline-from-left" href="./up-up.html" >Up & Up</a> /
+            <a class="selected-footer" href="./rei-backpack.html" >REI Backpack Finder</a> /
+            <a class="hvr-underline-from-left" href="./thriller.html" >The Resurrected</a>
+          </p>
+          <br>
+          <br>
+          <p class="footer-text">Designed and Handcoded with ♥ and ♫</p>
+        </div>
+        <div class="footer-icons col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a href="https://dribbble.com/yanfengjin" target="_blank"><i class="fa fa-dribbble fa-lg" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/yanfeng-jin-tony-80533455/" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+            <a href="https://medium.com/@yanfengjin" target="_blank"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+            <a href="mailto:yjin@gatech.edu" target="_blank"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a>
+          </p>
+          <br>
+          <p class="footer-text-small">Tony Yanfeng Jin © 2017-2018 All Rights Reserved</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+</html>
